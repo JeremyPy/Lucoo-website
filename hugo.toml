@@ -1,0 +1,57 @@
+enableRobotsTXT = true
+
+baseURL = "https://lucoo.net/"
+languageCode = "zh-cn"
+title = "Lucoo"
+theme = "PaperMod"
+
+# =========================
+# URL 规则（非常关键）
+# =========================
+[permalinks]
+  posts = "/:slug/"
+
+# =========================
+# SEO & 搜索引擎
+# =========================
+
+[sitemap]
+  changefreq = "daily"
+  priority = 0.7
+  filename = "sitemap.xml"
+
+# =========================
+# PaperMod 参数
+# =========================
+[params]
+  description = "Lucoo — 记录、思考与观察"
+
+  # 明亮 / 暗黑
+  defaultTheme = "auto"
+  themeSwitch = true
+
+  # 阅读体验
+  ShowReadingTime = true
+  ShowToc = false
+  ShowCodeCopyButtons = true
+
+  # 页面增强
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowShareButtons = true
+
+# =========================
+# 顶部菜单
+# =========================
+[menu]
+
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 1
+
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 2
+
