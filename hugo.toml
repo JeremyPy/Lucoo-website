@@ -1,57 +1,337 @@
+# =========================
+# 站点基础信息
+# =========================
+baseURL = "https://lucoo.net/" # 站点根地址，用于生成绝对链接、站点地图等
+languageCode = "zh-cn" # 站点默认语言代码
+defaultContentLanguage = "zh-cn" # Hugo 默认内容语言
+# 仅启用中文，避免生成英文站点（主题内置英文配置）
+disableLanguages = ["en"]
+
+title = "Lucoo" # 站点标题（显示在浏览器标题、社交分享、页眉等）
+theme = "blowfish" # 使用的主题名称
+
+# robots.txt：让搜索引擎收录
 enableRobotsTXT = true
 
-baseURL = "https://lucoo.net/"
-languageCode = "zh-cn"
-title = "Lucoo"
-theme = "PaperMod"
+# 摘要长度（用于列表页和 SEO 描述）
+summaryLength = 30
+
+# 启用 CJK（中文/日文/韩文）分词与字数统计优化
+hasCJKLanguage = true
+
+# 启用 emoji 渲染（如 :tada:）
+enableEmoji = true
 
 # =========================
-# URL 规则（非常关键）
+# URL 规则
 # =========================
 [permalinks]
-  posts = "/:slug/"
+  posts = "/:slug/" # posts 下文章的 URL 规则（使用 slug 作为路径）
 
 # =========================
-# SEO & 搜索引擎
+# 分页
 # =========================
+[pagination]
+  pagerSize = 102 # 每页文章数量（列表页分页）
 
+# =========================
+# 图片处理
+# =========================
+[imaging]
+  anchor = "Center" # 图片裁剪锚点（中心对齐）
+
+# =========================
+# 分类体系（Taxonomies）
+# =========================
+[taxonomies]
+  tag = "tags" # 标签集合
+  category = "categories" # 分类集合
+  author = "authors" # 作者集合（主题支持作者页）
+  series = "series" # 系列集合
+
+# =========================
+# 站点地图
+# =========================
 [sitemap]
-  changefreq = "daily"
-  priority = 0.7
-  filename = "sitemap.xml"
+  changefreq = "daily" # 更新频率
+  priority = 0.7 # 站点地图优先级
+  filename = "sitemap.xml" # 站点地图文件名
 
 # =========================
-# PaperMod 参数
+# 输出格式
+# =========================
+[outputs]
+  home = ["HTML", "RSS", "JSON"] # 首页生成 HTML/RSS/JSON（JSON 用于站内搜索）
+
+# =========================
+# 相关文章
+# =========================
+[related]
+  threshold = 0 # 相关性阈值，越低越容易触发
+  toLower = false # 是否统一转小写
+
+  [[related.indices]]
+    name = "tags"
+    weight = 100
+
+  [[related.indices]]
+    name = "categories"
+    weight = 100
+
+  [[related.indices]]
+    name = "series"
+    weight = 50
+
+  [[related.indices]]
+    name = "authors"
+    weight = 20
+
+  [[related.indices]]
+    name = "date"
+    weight = 10
+
+  [[related.indices]]
+    applyFilter = false
+    name = "fragmentrefs"
+    type = "fragments"
+    weight = 10
+
+# =========================
+# Markdown 渲染设置（主题要求）
+# =========================
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.parser]
+      wrapStandAloneImageWithinParagraph = false # 避免图片外层自动包裹 <p>
+
+      [markup.goldmark.parser.attribute]
+        block = true # 允许 Markdown block 级别自定义属性
+
+    [markup.goldmark.renderer]
+      unsafe = true # 允许 HTML（如 iframe）
+
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\\[', '\\]'], ['$$', '$$']] # 公式块
+          inline = [['\\(', '\\)']] # 行内公式
+
+  [markup.highlight]
+    noClasses = false # 语法高亮使用 CSS 类（更适合主题样式）
+
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
+
+# =========================
+# 主题参数（Blowfish）
 # =========================
 [params]
-  description = "Lucoo — 记录、思考与观察"
+  description = "Lucoo — 记录、思考与观察" # 站点描述（用于 SEO/社交分享）
 
-  # 明亮 / 暗黑
-  defaultTheme = "auto"
-  themeSwitch = true
+  # 主题配色方案（对应 themes/blowfish/assets/css/schemes/）
+  colorScheme = "blowfish"
 
-  # 阅读体验
-  ShowReadingTime = true
-  ShowToc = false
-  ShowCodeCopyButtons = true
+  # 默认外观：light / dark
+  defaultAppearance = "dark"
 
-  # 页面增强
-  ShowPostNavLinks = true
-  ShowBreadCrumbs = true
-  ShowShareButtons = true
+  # 跟随系统暗黑模式
+  autoSwitchAppearance = true
+
+  # 启用无障碍辅助（键盘导航、ARIA）
+  enableA11y = false
+
+  # 启用站内搜索（需要 home JSON 输出）
+  enableSearch = true
+
+  # 代码块复制按钮
+  enableCodeCopy = true
+
+  # 结构化面包屑（利于 SEO）
+  enableStructuredBreadcrumbs = true
+
+  # 列表页主内容来源（影响首页“最近文章”）
+  mainSections = ["postsinfo", "vpstest"]
+
+  # 关闭图片优化（默认 false = 开启优化）
+  disableImageOptimization = false
+  disableImageOptimizationMD = false
+
+  # 是否隐藏页眉文字（只显示 Logo）
+  disableTextInHeader = false
+
+  # 默认背景图（用于首页/列表/文章 Hero）
+  defaultBackgroundImage = "/img/background.svg"
+
+  # 默认卡片封面图（文章没有 featureimage 时使用）
+  defaultFeaturedImage = "/img/featured.svg"
+
+  # 默认社交分享图（Open Graph / Twitter Cards）
+  defaultSocialImage = "/img/blowfish_banner.png"
+
+  # 页眉 Logo（留空则不显示图标）
+  logo = ""
+
+  # 外链封面图是否热链
+  hotlinkFeatureImage = false
+
+  # 高亮当前菜单
+  highlightCurrentMenuArea = true
+
+  # 智能目录（自动折叠）
+  smartTOC = true
+  smartTOCHideUnfocusedChildren = false
+
+  # 资源指纹算法（用于缓存）
+  fingerprintAlgorithm = "sha512"
+
+  # -------------------------
+  # 站点所有者信息（用于作者卡片、首页等）
+  # -------------------------
+  [params.author]
+    name = "Lucoo" # 作者名称
+    image = "img/logo.svg" # 作者头像
+    headline = "数据驱动的 VPS/主机测评与推荐" # 作者一句话
+    bio = "专注 VPS/主机评测与结构化对比，强调可复用的数据指标与清晰的购买建议。" # 作者简介
+    links = [
+      { github = "https://github.com/" },
+      { x-twitter = "https://twitter.com/" },
+      { youtube = "https://www.youtube.com/" },
+      { linkedin = "https://www.linkedin.com/" },
+      { facebook = "https://www.facebook.com/" },
+    ]
+
+  # -------------------------
+  # 头部布局
+  # -------------------------
+  [params.header]
+    layout = "fixed" # basic / fixed / fixed-fill / fixed-gradient / fixed-fill-blur
+
+  # -------------------------
+  # 底部布局
+  # -------------------------
+  [params.footer]
+    showMenu = true # 显示页脚菜单
+    showCopyright = true # 显示版权
+    showThemeAttribution = false # 是否显示主题署名
+    showAppearanceSwitcher = true # 显示暗黑/明亮切换
+    showScrollToTop = true # 显示回到顶部按钮
+
+  # -------------------------
+  # 首页布局
+  # -------------------------
+  [params.homepage]
+    layout = "hero" # page / profile / hero / background / card / custom
+    showRecent = true # 显示最近文章
+    showRecentItems = 6 # 最近文章数量
+    showMoreLink = true # 显示“更多”按钮
+    showMoreLinkDest = "postsinfo" # “更多”跳转到哪个栏目
+    cardView = true # 是否用卡片展示
+    cardViewScreenWidth = false # 卡片是否占满宽度
+    layoutBackgroundBlur = false # 背景虚化
+    disableHeroImageFilter = false
+
+  # -------------------------
+  # 文章页设置
+  # -------------------------
+  [params.article]
+    showDate = false # 是否显示日期
+    showViews = false # 是否显示阅读量（需 Firebase 配置）
+    showLikes = false # 是否显示点赞（需 Firebase 配置）
+    showDateOnlyInArticle = false
+    showDateUpdated = false
+    showAuthor = false
+    showHero = true
+    heroStyle = "background" # basic / big / background / thumbAndBackground
+    layoutBackgroundBlur = true
+    layoutBackgroundHeaderSpace = true
+    showBreadcrumbs = true
+    showDraftLabel = true
+    showHeadingAnchors = true
+    showPagination = true
+    showReadingTime = true
+    showTableOfContents = true
+    showRelatedContent = true
+    relatedContentLimit = 6
+    showTaxonomies = true
+    showAuthorsBadges = true
+    showZenMode = true
+
+  # -------------------------
+  # 列表页设置（![1769674994063](image/hugo/1769674994063.png)/测评列表）
+  # -------------------------
+  [params.list]
+    showHero = true
+    heroStyle = "background"
+    layoutBackgroundBlur = true
+    layoutBackgroundHeaderSpace = false
+    showBreadcrumbs = false
+    showSummary = true
+    showViews = false
+    showLikes = false
+    showTableOfContents = true
+    showCards = true
+    orderByWeight = true
+    groupByYear = false
+    cardView = true
+    cardViewScreenWidth = false
+    constrainItemsWidth = false
+
+  # -------------------------
+  # 分类/标签页设置
+  # -------------------------
+  [params.taxonomy]
+    showTermCount = true
+    showHero = true
+    heroStyle = "background"
+    showBreadcrumbs = false
+    showViews = false
+    showLikes = false
+    showTableOfContents = true
+    cardView = false
+
+  [params.term]
+    showHero = true
+    heroStyle = "background"
+    showBreadcrumbs = false
+    showViews = false
+    showLikes = false
+    showTableOfContents = true
+    groupByYear = false
+    cardView = true
+    cardViewScreenWidth = false
+
+  # -------------------------
+  # 站点验证（搜索引擎）
+  # -------------------------
+  [params.verification]
+    google = "" # Google Search Console 验证码
+    bing = "" # Bing Webmaster 验证码
+    pinterest = "" # Pinterest 验证码
+    yandex = "" # Yandex 验证码
+
+  # -------------------------
+  # 访问统计：Umami
+  # -------------------------
+  [params.umamiAnalytics]
+    websiteid = "2abebe6d-2822-4c0e-b871-3f4b4cae6df4" # 你的 Umami 网站 ID
+    domain = "cloud.umami.is" # Umami 域名
+    dataDomains = "lucoo.net" # 统计的域名（可多个，用逗号分隔）
+    scriptName = "" # 自定义脚本名，留空使用 script.js
+    enableTrackEvent = true # 启用事件追踪
 
 # =========================
 # 顶部菜单
 # =========================
 [menu]
+  [[menu.main]]
+    name = "技术分享"
+    pageRef = "postsinfo"
+    weight = 10
 
   [[menu.main]]
-    name = "Posts"
-    url = "/posts/"
-    weight = 1
-
-  [[menu.main]]
-    name = "About"
-    url = "/about/"
-    weight = 2
-
+    name = "VPS测评"
+    pageRef = "vpstest"
+    weight = 20
