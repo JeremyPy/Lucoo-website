@@ -8,6 +8,7 @@ tags: ["教程", "AI", "Bot"]
 categories: ["技术分享"]
 showTableOfContents: true
 showSummary: true
+featureimage: "cover.png"
 ---
 
 > 这篇是我按自己的实际安装流程写的，偏小白视角，跟着做基本不会出错。
