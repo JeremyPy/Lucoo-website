@@ -5,7 +5,7 @@ lastmod: 2026-01-30
 description: "1C1G / 30G NVMe / 5€ 年付"
 slug: "takehost-liantong-happy"
 tags: ["测评", "VPS"]
-categories: ["测评"]
+categories: ["VPS测评"]
 series: ["VPS 测评"]
 summary: "年付 5€ 的低价机型，回程以 163/169/CMI 为主，联通用户相对更友好。"
 showTableOfContents: true
