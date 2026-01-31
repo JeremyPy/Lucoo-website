@@ -1,5 +1,5 @@
 ---
-title: "OpenClaw 安装 + Telegram 接入（新手一步一步）"
+title: "clawdbot/moltbot/OpenClaw 安装 + Telegram 接入（新手一步一步）"
 date: 2026-01-30
 lastmod: 2026-01-30
 description: "从服务器准备到 Telegram Bot 接入，全流程实操记录"
