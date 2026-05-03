@@ -14,3 +14,9 @@ description: "数据驱动的 VPS 与主机测评、对比与推荐"
 </div>
 
 如果你在意真实数据、可复用的对比结论与清晰的购买建议，Lucoo 会是一个长期可依赖的参考站点。
+
+<p style="margin-top: 1.5rem; text-align: center;">
+  <a href="https://pay.ldxp.cn/shop/Lucoo" target="_blank" rel="noopener noreferrer" style="display: inline-block; border-radius: 0.5rem; background: #dc2626; padding: 0.75rem 1.15rem; color: #ffffff; font-weight: 800; text-decoration: none; box-shadow: 0 10px 24px rgba(220, 38, 38, 0.35);">
+    店铺地址：https://pay.ldxp.cn/shop/Lucoo
+  </a>
+</p>
