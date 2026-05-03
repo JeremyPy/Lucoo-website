@@ -1,0 +1,64 @@
+.main-menu a[href="https://pay.ldxp.cn/shop/Lucoo"] {
+  border-radius: 0.45rem;
+  background: #dc2626;
+  color: #ffffff;
+  font-weight: 800;
+  padding: 0.4rem 0.75rem;
+  box-shadow: 0 8px 18px rgba(220, 38, 38, 0.28);
+}
+
+.main-menu a[href="https://pay.ldxp.cn/shop/Lucoo"]:hover {
+  background: #ef4444;
+  color: #ffffff;
+}
+
+.main-menu a[href="https://pay.ldxp.cn/shop/Lucoo"] span {
+  color: inherit;
+  font-weight: inherit;
+}
+
+.lucoo-header-shop {
+  align-items: center;
+  background: #dc2626;
+  border-radius: 0.45rem;
+  box-shadow: 0 8px 18px rgba(220, 38, 38, 0.28);
+  color: #ffffff;
+  display: inline-flex;
+  font-size: 0.875rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-left: 0.65rem;
+  padding: 0.42rem 0.65rem;
+  text-decoration: none;
+}
+
+.lucoo-header-shop:hover {
+  background: #ef4444;
+  color: #ffffff;
+}
+
+article.max-w-full.prose > div.relative .mt-3.mb-10.text-2xl {
+  display: none;
+}
+
+.home-contact-links {
+  align-items: center;
+  color: #dbeafe;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1rem;
+  font-weight: 700;
+  gap: 0.65rem 1rem;
+  justify-content: center;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.home-contact-links a {
+  color: #bfdbfe;
+  text-decoration: none;
+}
+
+.home-contact-links a:hover {
+  color: #ffffff;
+}

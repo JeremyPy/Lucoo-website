@@ -193,7 +193,7 @@ enableEmoji = true
   [params.author]
     name = "Lucoo" # 作者名称
     image = "img/logo.svg" # 作者头像
-    headline = "数据驱动的 VPS/主机测评与推荐" # 作者一句话
+    headline = "" # 作者一句话
     bio = "专注 VPS/主机评测与结构化对比，强调可复用的数据指标与清晰的购买建议。" # 作者简介
     links = [
       { github = "https://github.com/" },
@@ -335,3 +335,9 @@ enableEmoji = true
     name = "VPS测评"
     pageRef = "vpstest"
     weight = 20
+
+  [[menu.main]]
+    identifier = "shop"
+    name = "店铺地址"
+    url = "https://pay.ldxp.cn/shop/Lucoo"
+    weight = 30
