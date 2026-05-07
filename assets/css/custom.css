@@ -17,11 +17,28 @@
   font-weight: inherit;
 }
 
-.lucoo-header-shop {
-  align-items: center;
-  background: #dc2626;
+.main-menu a[href="https://cc.lucoo.net"] {
   border-radius: 0.45rem;
-  box-shadow: 0 8px 18px rgba(220, 38, 38, 0.28);
+  background: #16a34a;
+  color: #ffffff;
+  font-weight: 800;
+  padding: 0.4rem 0.75rem;
+  box-shadow: 0 8px 18px rgba(22, 163, 74, 0.28);
+}
+
+.main-menu a[href="https://cc.lucoo.net"]:hover {
+  background: #22c55e;
+  color: #ffffff;
+}
+
+.main-menu a[href="https://cc.lucoo.net"] span {
+  color: inherit;
+  font-weight: inherit;
+}
+
+.lucoo-header-action {
+  align-items: center;
+  border-radius: 0.45rem;
   color: #ffffff;
   display: inline-flex;
   font-size: 0.875rem;
@@ -32,8 +49,23 @@
   text-decoration: none;
 }
 
+.lucoo-header-shop {
+  background: #dc2626;
+  box-shadow: 0 8px 18px rgba(220, 38, 38, 0.28);
+}
+
 .lucoo-header-shop:hover {
   background: #ef4444;
+  color: #ffffff;
+}
+
+.lucoo-header-relay {
+  background: #16a34a;
+  box-shadow: 0 8px 18px rgba(22, 163, 74, 0.28);
+}
+
+.lucoo-header-relay:hover {
+  background: #22c55e;
   color: #ffffff;
 }
 
@@ -61,4 +93,48 @@ article.max-w-full.prose > div.relative .mt-3.mb-10.text-2xl {
 
 .home-contact-links a:hover {
   color: #ffffff;
+}
+
+.home-action-links {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.home-action-button {
+  align-items: center;
+  border-radius: 0.5rem;
+  color: #ffffff;
+  display: inline-flex;
+  font-weight: 800;
+  justify-content: center;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  padding: 0.75rem 1.15rem;
+  text-decoration: none;
+}
+
+.home-action-button:hover {
+  color: #ffffff;
+}
+
+.home-action-shop {
+  background: #dc2626;
+  box-shadow: 0 10px 24px rgba(220, 38, 38, 0.35);
+}
+
+.home-action-shop:hover {
+  background: #ef4444;
+}
+
+.home-action-relay {
+  background: #16a34a;
+  box-shadow: 0 10px 24px rgba(22, 163, 74, 0.32);
+}
+
+.home-action-relay:hover {
+  background: #22c55e;
 }
