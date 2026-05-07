@@ -21,7 +21,7 @@ featureimage: "cover.png"
 | 海外代理访问地址 | [https://apicc.lucoo.net](https://apicc.lucoo.net) |
 | Cherry Studio 下载地址 | [https://www.cherry-ai.com/](https://www.cherry-ai.com/) |
 | 额度购买地址 | [https://pay.ldxp.cn/shop/Lucoo](https://pay.ldxp.cn/shop/Lucoo) |
-| 兑换充值地址 | [https://cc.lucoo.net/console/topup](https://cc.lucoo.net/console/topup) |
+| 充值地址 | [https://cc.lucoo.net/wallet](https://cc.lucoo.net/wallet) |
 
 ## 二、对接步骤
 
@@ -102,8 +102,8 @@ featureimage: "cover.png"
 新账号默认会赠送一定额度，可以先直接测试。如果额度不足，按下面的流程充值：
 
 1. 打开购买地址：[https://pay.ldxp.cn/shop/Lucoo](https://pay.ldxp.cn/shop/Lucoo)
-2. 购买完成后，进入兑换充值地址：[https://cc.lucoo.net/console/topup](https://cc.lucoo.net/console/topup)
-3. 按页面提示输入兑换信息，完成充值后即可继续使用。
+2. 购买完成后，进入充值地址：[https://cc.lucoo.net/wallet](https://cc.lucoo.net/wallet)
+3. 按页面提示完成充值后即可继续使用。
 
 ## 四、注意事项
 
