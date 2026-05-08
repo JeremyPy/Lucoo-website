@@ -78,7 +78,7 @@ featureimage: "cover.png"
 | 供应商名称 | `ccLucoonet` |
 | 官网链接 | `https://cc.lucoo.net` |
 | API Key | 你在中转站复制的 `sk-` 开头令牌 |
-| API 请求地址 | 国内默认 `https://cc.lucoo.net`，海外用户可用 `https://apicc.lucoo.net` |
+| API 请求地址 | 国内默认 <span class="lucoo-red-url">https://cc.lucoo.net/v1</span>，海外用户可用 <span class="lucoo-red-url">https://apicc.lucoo.net/v1</span> |
 | 模型名称 | 按你开通的模型填写，示例为 `gpt-5.5` |
 
 不要把真实 API Key 截图发给别人，也不要把它写进公开文章、群聊或代码仓库。
@@ -159,7 +159,7 @@ base_url = "https://apicc.lucoo.net/v1"
 优先检查三件事：
 
 1. API Key 是否复制完整，前后不要有空格。
-2. 国内地址使用 `https://cc.lucoo.net`，海外代理访问使用 `https://apicc.lucoo.net`。
+2. 国内地址使用 `https://cc.lucoo.net/v1`，海外代理访问使用 `https://apicc.lucoo.net/v1`。
 3. 修改配置后是否完全重启 Codex 或 VS Code。
 
 如果还是不行，重新打开 CC Switch，检查写入的 `config.toml` 是否和页面里显示的一致。

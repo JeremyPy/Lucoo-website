@@ -138,3 +138,9 @@ article.max-w-full.prose > div.relative .mt-3.mb-10.text-2xl {
 .home-action-relay:hover {
   background: #22c55e;
 }
+
+.lucoo-red-url,
+.lucoo-red-url a {
+  color: #dc2626 !important;
+  font-weight: 800;
+}
