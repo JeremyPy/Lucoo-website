@@ -15,7 +15,7 @@ featureimage: "image-34.png"
 
 腾讯 CodeBuddy 支持添加自定义 OpenAI 兼容 API。要接入 LucooNet，核心就是准备好 LucooNet 的 API Key，然后在 CodeBuddy 的模型设置里添加自定义模型。
 
-最容易出问题的是 API Key 创建时没有选择 `token 分组`。如果令牌分组为空、选错分组，或者仍然使用不适合的默认分组，CodeBuddy 里即使填了 API Key，也可能出现模型不可用、请求失败、无权限调用等问题。
+<p class="lucoo-token-warning-block">最容易出问题的是 API Key 创建时没有选择 token 分组。token 分组必须配置，否则 CodeBuddy 里即使填了 API Key，也可能出现模型不可用、请求失败、无权限调用等问题。</p>
 
 ## 二、常用地址
 
@@ -45,7 +45,7 @@ featureimage: "image-34.png"
 
 创建令牌时，重点检查「令牌分组」。推荐选择 `plus 号池` 或按你开通情况选择对应的可用分组。
 
-不要跳过这一步。之前很多人无法使用，就是因为创建 API Key 时没有配置 token 分组，导致后面 CodeBuddy 虽然能保存模型，但实际调用失败。
+<p class="lucoo-token-warning-block">不要跳过这一步：token 分组必须配置。之前很多人无法使用，就是因为创建 API Key 时没有配置 token 分组，导致后面 CodeBuddy 虽然能保存模型，但实际调用失败。</p>
 
 ![创建令牌时选择 token 分组](image-3.png)
 
@@ -146,11 +146,11 @@ featureimage: "image-34.png"
 | 提供商 | `自定义 / Custom` |
 | 接口地址 | 国内默认填 `https://cc.lucoo.net/v1` |
 | 海外代理地址 | 如果国内地址不可用，可改填 `https://apicc.lucoo.net/v1` |
-| API Key | 粘贴 LucooNet 里复制的 `sk-` 开头令牌 |
+| API Key | 粘贴 LucooNet 里复制的 `sk-` 开头令牌，且该令牌必须已配置 token 分组 |
 | 模型名称 | 按你可用的模型填写，示例：`gpt-5.5` |
 | 高级配置 | 可按截图勾选工具调用、图片输入、推理模式 |
 
-这里再次确认一次：API Key 必须来自已经配置好 `token 分组` 的令牌。没有 token 分组的 Key，后面大概率无法正常调用。
+<p class="lucoo-token-warning-block">这里再次确认一次：API Key 必须来自已经配置好 token 分组的令牌。token 分组必须配置，没有 token 分组的 Key 后面大概率无法正常调用。</p>
 
 ![填写 LucooNet API 信息](image-37.png)
 
@@ -176,7 +176,7 @@ featureimage: "image-34.png"
 
 ### 1. 保存成功但模型不能用
 
-优先检查 LucooNet 后台的令牌是否配置了 `token 分组`。这是最常见的问题。
+优先检查 LucooNet 后台的令牌是否配置了 <span class="lucoo-token-warning">token 分组必须配置</span>。这是最常见的问题。
 
 如果分组为空、选错分组，或者分组没有对应模型权限，CodeBuddy 侧配置看起来正常，但实际请求会失败。
 

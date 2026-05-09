@@ -144,3 +144,23 @@ article.max-w-full.prose > div.relative .mt-3.mb-10.text-2xl {
   color: #dc2626 !important;
   font-weight: 800;
 }
+
+.lucoo-token-warning {
+  background: #fef08a;
+  border-radius: 0.25rem;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  color: #dc2626 !important;
+  font-weight: 900;
+  padding: 0.08rem 0.35rem;
+}
+
+.lucoo-token-warning-block {
+  background: #fef08a;
+  border: 1px solid #facc15;
+  border-radius: 0.5rem;
+  color: #dc2626 !important;
+  font-weight: 900;
+  margin: 1rem 0;
+  padding: 0.85rem 1rem;
+}

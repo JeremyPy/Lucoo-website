@@ -39,7 +39,9 @@ featureimage: "cover.png"
 
 ### 3. 创建令牌
 
-创建令牌时一定要选择 Plus 号池或 Pro 号池，不要使用默认的 Free 号池。Free 号池额度比较少，可能不够稳定使用；如果需要更高规格，可以选择 Pro 号池。其余配置按截图保存即可。
+<p class="lucoo-token-warning-block">重点：创建令牌时必须配置 token 分组，选择 Plus 号池、Pro 号池或你实际开通的可用分组。没有配置 token 分组，后面 Cherry Studio 可能保存成功但无法使用。</p>
+
+不要使用默认的 Free 号池。Free 号池额度比较少，可能不够稳定使用；如果需要更高规格，可以选择 Pro 号池。其余配置按截图保存即可。
 
 ![配置令牌信息](image-3.png)
 
@@ -70,6 +72,8 @@ featureimage: "cover.png"
 ### 8. 获取模型列表
 
 点击「添加」，再点击「获取模型列表」，让 Cherry Studio 从中转站读取可用模型。
+
+如果这里获取失败，先回到 LucooNet 令牌管理，确认当前令牌已经配置 <span class="lucoo-token-warning">token 分组必须配置</span>。
 
 ![获取模型列表](image-8.png)
 
@@ -107,6 +111,7 @@ featureimage: "cover.png"
 
 ## 四、注意事项
 
+- <span class="lucoo-token-warning">token 分组必须配置</span>。这是最常见的不可用原因。
 - 令牌相当于访问凭证，不要公开分享给别人。
 - 如果模型列表获取失败，先检查中转站地址、令牌和网络环境是否正确。
 - 国内默认使用 `https://cc.lucoo.net`；跨境网络不稳定时可以尝试 `https://apicc.lucoo.net`。
