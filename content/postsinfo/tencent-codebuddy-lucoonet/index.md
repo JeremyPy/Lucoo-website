@@ -1,7 +1,7 @@
 ---
 title: "腾讯 CodeBuddy 接入 LucooNet API Key 教程"
-date: 2026-05-09T12:00:00+08:00
-lastmod: 2026-05-09T12:00:00+08:00
+date: 2026-05-09T11:00:00+08:00
+lastmod: 2026-05-09T11:00:00+08:00
 description: "从 LucooNet 创建 API Key、正确选择 token 分组，到在腾讯 CodeBuddy 中添加自定义 OpenAI 兼容模型的完整步骤。"
 slug: "tencent-codebuddy-lucoonet"
 tags: ["CodeBuddy", "AI", "OpenAI", "LucooNet", "中转站"]
