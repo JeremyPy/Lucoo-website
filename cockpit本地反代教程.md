@@ -48,9 +48,13 @@ Cockpit 是一个本地反代和多账号管理工具，可以在本机统一管
 
 打开 [https://cc.lucoo.net](https://cc.lucoo.net)，按页面提示完成注册并登录。
 
+![中转站注册登录页面](content/postsinfo/cockpit-local-reverse-proxy/lucoo-token-register.png)
+
 ### 2. 进入令牌管理
 
 登录后进入后台，找到「令牌管理」，然后点击添加令牌。
+
+![进入令牌管理并添加令牌](content/postsinfo/cockpit-local-reverse-proxy/lucoo-token-management.png)
 
 ### 3. 创建令牌并配置 token 分组
 
@@ -60,9 +64,13 @@ Cockpit 是一个本地反代和多账号管理工具，可以在本机统一管
 
 不建议使用默认 Free 号池。Free 号池额度较少，稳定性和可用模型范围通常不适合长期使用。如果你购买了 Pro 或 Plus 额度，就选择对应分组。
 
+![创建令牌并配置 token 分组](content/postsinfo/cockpit-local-reverse-proxy/lucoo-token-create.png)
+
 ### 4. 复制 API Key
 
 令牌创建成功后，复制 `sk-` 开头的 API Key。后面在 Cockpit 的 Custom 配置里会用到。
+
+![令牌创建成功并复制 API Key](content/postsinfo/cockpit-local-reverse-proxy/lucoo-token-created.png)
 
 安全提醒：
 
