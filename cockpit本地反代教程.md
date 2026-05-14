@@ -205,7 +205,7 @@ Cockpit 在启动时还会自动修复一些常见会话问题，减少切号后
 
 点击添加账号。
 
-![添加账号到集合](content/postsinfo/cockpit-local-reverse-proxy/1778771149299.png)
+![添加账号到集合](content/postsinfo/cockpit-local-reverse-proxy/1778771149299-redacted.png)
 
 ### 2. 选择账号并保存集合
 
@@ -221,7 +221,7 @@ Cockpit 在启动时还会自动修复一些常见会话问题，减少切号后
 
 添加完成后点击开始。
 
-![启动集合](content/postsinfo/cockpit-local-reverse-proxy/1778771299509.png)
+![启动集合](content/postsinfo/cockpit-local-reverse-proxy/1778771299509-redacted.png)
 
 ![确认启动集合](content/postsinfo/cockpit-local-reverse-proxy/1778771307865.png)
 
