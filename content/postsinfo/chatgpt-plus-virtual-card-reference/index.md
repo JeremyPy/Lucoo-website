@@ -1,5 +1,5 @@
 ---
-title: "0 刀虚拟卡手搓 ChatGPT Plus：流程拆解、风险点与替代方案"
+title: "0 刀虚拟卡手搓 ChatGPT Plus教程"
 date: 2026-05-20T10:00:32+08:00
 lastmod: 2026-05-20T10:00:32+08:00
 description: "面向小白的 0 刀虚拟卡开通 ChatGPT Plus 教程，讲清准备材料、代理匹配、Session 取链、PayPal 验证和风控注意事项。"
