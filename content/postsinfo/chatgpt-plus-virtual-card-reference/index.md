@@ -30,7 +30,7 @@ featureimage: "images/img-001.png"
 | 有 Plus 试用入口的 ChatGPT 账号 | 没有试用资格就无法 0 刀开通 | 换邮箱重新注册，或者直接买现成账号 |
 | 指纹浏览器 | 隔离浏览器环境，减少账号串环境 | 按本文用 Roxy 这类工具即可 |
 | 美国住宅代理 | 让支付环境和虚拟卡账单地址匹配 | 不要用普通机房节点硬试 |
-| 0 刀虚拟卡 | 用于 PayPal 或支付验证 | 可以去店铺看现成方案 |
+| 0 刀虚拟卡 | 用于 PayPal 或支付验证 | 可直接购买：[0 刀虚拟卡](https://pay.ldxp.cn/item/7d1lzk) |
 | PayPal 接码手机号 | PayPal 验证时收短信 | 没有接码就不要继续到支付页 |
 | 转链 / JSON 工具 | 用 Session 生成或检查支付链接 | 用文首工具入口 |
 
@@ -69,7 +69,9 @@ featureimage: "images/img-001.png"
 
 ## 三、准备 0 刀虚拟卡和 PayPal 接码
 
-0 刀虚拟卡和 PayPal 接码可以从卡密平台购买。平台不是重点，重点是你要确认自己拿到的信息完整，至少包括下面这些：
+0 刀虚拟卡可以直接从 Lucoo 购买：[https://pay.ldxp.cn/item/7d1lzk](https://pay.ldxp.cn/item/7d1lzk)。PayPal 接码也建议提前准备好，不要等支付页弹出手机号验证时才临时去找。
+
+平台不是重点，重点是你要确认自己拿到的信息完整，至少包括下面这些：
 
 | 信息 | 用途 |
 | --- | --- |
@@ -79,7 +81,7 @@ featureimage: "images/img-001.png"
 | PayPal 接码手机号 | PayPal 注册或验证时接短信 |
 | 接码取件链接 | 收取 PayPal 验证码 |
 
-如果你不想自己买卡、买代理、接码、排查，可以直接走 Lucoo 店铺：[https://pay.ldxp.cn/shop/Lucoo](https://pay.ldxp.cn/shop/Lucoo)。自己操作时，失败成本通常不在单个卡密，而在反复排查代理和 PayPal 风控上。
+如果你不想自己买卡、买代理、接码、排查，可以直接走 Lucoo 店铺：[https://pay.ldxp.cn/shop/Lucoo](https://pay.ldxp.cn/shop/Lucoo)。其中 0 刀虚拟卡单品入口是：[https://pay.ldxp.cn/item/7d1lzk](https://pay.ldxp.cn/item/7d1lzk)。自己操作时，失败成本通常不在单个卡密，而在反复排查代理和 PayPal 风控上。
 
 ![0 刀虚拟卡和 PayPal 接码购买示例](images/img-004.png)
 
