@@ -1,9 +1,9 @@
 ---
-title: "18.8元款 ChatGPT Plus 操作手册"
+title: "ChatGPT Plus 渠道 2 操作手册"
 date: 2026-05-09
 lastmod: 2026-05-09
-description: "18.8元款 ChatGPT Plus 成品号的订单卡密查看、邮箱导入、验证码获取和登录步骤。"
-slug: "chatgpt-plus-18-8-manual"
+description: "ChatGPT Plus 渠道 2 成品号的订单卡密查看、邮箱导入、验证码获取和登录步骤。"
+slug: "chatgpt-plus-channel-2-manual"
 tags: ["ChatGPT", "Plus", "AI"]
 categories: ["技术分享"]
 showTableOfContents: true
@@ -11,7 +11,7 @@ showSummary: true
 featureimage: "image-01.png"
 ---
 
-这篇手册适用于购买 18.8 元款 ChatGPT Plus 成品号后的首次登录。整个流程不需要 ChatGPT 密码，按订单里的邮箱信息进入取件工具，拿到验证码后登录 ChatGPT 即可。
+这篇手册适用于购买 ChatGPT Plus 渠道 2 成品号后的首次登录。整个流程不需要 ChatGPT 密码，按订单里的邮箱信息进入取件工具，拿到验证码后登录 ChatGPT 即可。
 
 > 公开页面中的邮箱、密码、Session 和验证码均已打码。你自己操作时不要把完整卡密、Session、验证码截图发到公开群聊或网站。
 

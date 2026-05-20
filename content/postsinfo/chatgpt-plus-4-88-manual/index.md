@@ -1,9 +1,9 @@
 ---
-title: "4.88元款 ChatGPT 账号操作手册"
+title: "ChatGPT 账号渠道 1 操作手册"
 date: 2026-05-10T17:18:24+08:00
 lastmod: 2026-05-10T17:18:24+08:00
-description: "4.88元款 ChatGPT 账号的卡密查看、邮箱取件、验证码获取和网页登录步骤。"
-slug: "chatgpt-plus-4-88-manual"
+description: "ChatGPT 账号渠道 1 的卡密查看、邮箱取件、验证码获取和网页登录步骤。"
+slug: "chatgpt-account-channel-1-manual"
 tags: ["ChatGPT", "AI", "账号登录"]
 categories: ["技术分享"]
 showTableOfContents: true
@@ -11,7 +11,7 @@ showSummary: true
 featureimage: "image-01.png"
 ---
 
-这篇手册适用于购买 4.88 元款 ChatGPT 账号后的首次登录。整个流程的核心是：先用订单里的完整卡密进入邮箱取件工具，再到 ChatGPT 发起邮箱验证码登录，最后回到取件工具刷新并复制验证码。
+这篇手册适用于购买 ChatGPT 账号渠道 1 后的首次登录。整个流程的核心是：先用订单里的完整卡密进入邮箱取件工具，再到 ChatGPT 发起邮箱验证码登录，最后回到取件工具刷新并复制验证码。
 
 > 公开页面中的邮箱、密码、Session 和验证码均已脱敏。实际操作时，不要把完整卡密、验证码或登录后的账号信息发到公开群聊、网站或截图里。
 

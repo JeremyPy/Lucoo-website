@@ -1,9 +1,9 @@
 ---
-title: "19元款Plus账号-操作手册"
+title: "ChatGPT Plus 渠道 3 操作手册"
 date: 2026-05-03
 lastmod: 2026-05-03
-description: "ChatGPT Plus 账号购买、登录、邮箱验证码获取和常见问题处理步骤。"
-slug: "chatgpt-plus-account-manual"
+description: "ChatGPT Plus 渠道 3 账号购买、登录、邮箱验证码获取和常见问题处理步骤。"
+slug: "chatgpt-plus-channel-3-manual"
 tags: ["ChatGPT", "AI"]
 categories: ["技术分享"]
 showTableOfContents: true
