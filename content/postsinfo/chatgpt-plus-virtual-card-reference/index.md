@@ -21,8 +21,6 @@ featureimage: "images/img-001.png"
 
 完整链路大致是：准备有试用资格的 ChatGPT 账号 -> 准备指纹浏览器 -> 购买或准备美国住宅代理 -> 准备 0 刀虚拟卡和 PayPal 接码 -> 提取 ChatGPT Session -> 生成 Plus 试用支付链接 -> 在指纹浏览器里完成 PayPal 绑定和验证 -> 成功后检查 Plus 状态并处理续费。
 
-![ChatGPT Plus 试用资格示例](images/img-001.png)
-
 ## 准备清单
 
 开始前先把材料准备齐，别边做到支付页边临时找东西。建议按下面顺序检查：
@@ -49,6 +47,10 @@ featureimage: "images/img-001.png"
 3. 如果使用域名邮箱，域名邮箱建议做成 `edu.xxx.xxx` 这种子域形式，例如在 Cloudflare 电子邮件路由里给域名增加 `edu` 子域。
 
 为什么要重视邮箱和注册节点？因为试用资格通常和账号画像有关。邮箱质量、注册 IP、历史行为都会影响后续页面是否给你试用入口。
+
+![ChatGPT 首页出现免费试用入口示例](images/img-000.png)
+
+![ChatGPT Plus 试用资格示例](images/img-001.png)
 
 ![Cloudflare 邮件路由子域示例](images/img-002.png)
 
@@ -113,6 +115,8 @@ featureimage: "images/img-001.png"
 ![指纹浏览器代理格式示例](images/img-008.png)
 
 ![指纹浏览器内 IP 地区测试示例](images/img-009.png)
+
+![代理 IP 和虚拟卡账单地址同州对照示例](images/img-010.png)
 
 ![IP 纯净度和地区一致性检查示例](images/img-011.png)
 
