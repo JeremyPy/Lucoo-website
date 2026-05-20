@@ -8,6 +8,7 @@ tags: ["Clash Verge", "代理", "教程"]
 categories: ["技术分享"]
 showTableOfContents: true
 showSummary: true
+featureimage: "cover.png"
 ---
 
 > 本文是 Lucoo 根据 FlowPilot 使用文档重新整理的实操版。需要现成账号、Plus 相关卡密、API 额度或不想自己排查环境，可以先看店铺：[https://pay.ldxp.cn/shop/Lucoo](https://pay.ldxp.cn/shop/Lucoo)。
