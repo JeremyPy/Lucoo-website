@@ -8,7 +8,7 @@ tags: ["ChatGPT Plus", "虚拟卡", "PayPal", "教程"]
 categories: ["技术分享"]
 showTableOfContents: true
 showSummary: true
-featureimage: "images/img-000.png"
+featureimage: "images/img-001.png"
 ---
 
 > 这是一篇给新手看的 0 刀虚拟卡开通 ChatGPT Plus 实操教程。流程里会涉及账号、代理、虚拟卡、PayPal、接码和支付链接，变量比较多；如果你不想自己一点点排查，可以直接看 Lucoo 店铺：[https://pay.ldxp.cn/shop/Lucoo](https://pay.ldxp.cn/shop/Lucoo)。
@@ -21,7 +21,7 @@ featureimage: "images/img-000.png"
 
 完整链路大致是：准备有试用资格的 ChatGPT 账号 -> 准备指纹浏览器 -> 购买或准备美国住宅代理 -> 准备 0 刀虚拟卡和 PayPal 接码 -> 提取 ChatGPT Session -> 生成 Plus 试用支付链接 -> 在指纹浏览器里完成 PayPal 绑定和验证 -> 成功后检查 Plus 状态并处理续费。
 
-![ChatGPT Plus 试用资格示例](images/img-000.png)
+![ChatGPT Plus 试用资格示例](images/img-001.png)
 
 ## 准备清单
 
@@ -50,7 +50,7 @@ featureimage: "images/img-000.png"
 
 为什么要重视邮箱和注册节点？因为试用资格通常和账号画像有关。邮箱质量、注册 IP、历史行为都会影响后续页面是否给你试用入口。
 
-![Cloudflare 邮件路由子域示例](images/img-001.png)
+![Cloudflare 邮件路由子域示例](images/img-002.png)
 
 ## 二、准备指纹浏览器和住宅代理
 
@@ -63,7 +63,7 @@ featureimage: "images/img-000.png"
 3. 城市能一致更好，至少不要跨到完全不相关的地区。
 4. 支付前必须再测一次 IP，因为代理可能会变。
 
-![代理购买和套餐示例](images/img-002.png)
+![Cliproxy 住宅代理套餐示例](images/img-003.png)
 
 ## 三、准备 0 刀虚拟卡和 PayPal 接码
 
@@ -79,7 +79,9 @@ featureimage: "images/img-000.png"
 
 如果你不想自己买卡、买代理、接码、排查，可以直接走 Lucoo 店铺：[https://pay.ldxp.cn/shop/Lucoo](https://pay.ldxp.cn/shop/Lucoo)。自己操作时，失败成本通常不在单个卡密，而在反复排查代理和 PayPal 风控上。
 
-![虚拟卡和接码购买示例](images/img-003.png)
+![0 刀虚拟卡和 PayPal 接码购买示例](images/img-004.png)
+
+![虚拟卡卡号、账单地址和接码链接示例](images/img-005.png)
 
 ## 四、根据虚拟卡地址匹配代理
 
@@ -93,7 +95,9 @@ featureimage: "images/img-000.png"
 
 这里最关键的规则是：代理 IP 至少要和虚拟卡在同一个州，城市能一致更好。原因是支付系统会综合判断账单地址、IP 地址、PayPal 账号地区和浏览器环境。如果 IP 在 A 州，账单地址在 B 州，就更像异常交易。
 
-![根据地址生成代理示例](images/img-006.png)
+![用 AI 拆解虚拟卡账单地址示例](images/img-006.png)
+
+![按虚拟卡所在州生成住宅代理示例](images/img-007.png)
 
 ## 五、把代理填进指纹浏览器并测试
 
@@ -106,13 +110,19 @@ featureimage: "images/img-000.png"
 
 可以用 `ippure.com` 检查纯净度。只要测试结果和虚拟卡地址差距太大，就不要继续支付，先换代理。
 
-![指纹浏览器代理设置示例](images/img-007.png)
+![指纹浏览器代理格式示例](images/img-008.png)
 
-![IP 纯净度检查示例](images/img-010.png)
+![指纹浏览器内 IP 地区测试示例](images/img-009.png)
+
+![IP 纯净度和地区一致性检查示例](images/img-011.png)
 
 ## 六、登录 ChatGPT 并提取 Session
 
-所有后续操作都建议在同一个指纹浏览器里完成。先打开 [https://chatgpt.com/](https://chatgpt.com/) 登录目标账号，然后新开标签页访问：
+所有后续操作都建议在同一个指纹浏览器里完成。先打开 [https://chatgpt.com/](https://chatgpt.com/) 登录目标账号。登录后如果账号菜单里仍是 Free，说明当前账号还没有开通 Plus，可以继续提取 Session 生成试用支付链接。
+
+![ChatGPT 当前账号仍为 Free 的示例](images/img-012.png)
+
+然后新开标签页访问：
 
 ```text
 https://chatgpt.com/api/auth/session
@@ -142,7 +152,11 @@ https://chatgpt.com/api/auth/session
 
 打开支付链接时仍然要在前面配置好的指纹浏览器里操作，不要复制到普通浏览器里。否则账号登录态、代理 IP 和浏览器指纹都会变化。
 
-![生成支付链接示例](images/img-014.png)
+![通过工具生成 Plus 支付链接示例](images/img-014.png)
+
+如果工具返回的是 `pay.openai.com` 的长链接，先保存好这个链接，后面浏览器异常、页面刷新或需要重新进入支付页时会用得上。
+
+![支付长链接示例](images/img-016.png)
 
 ## 八、支付前再次检查代理
 
@@ -158,7 +172,9 @@ https://chatgpt.com/api/auth/session
 
 如果不一致，先停下来换代理。不要抱着“试一下”的心态继续点，因为失败记录也会进入风控画像。
 
-![支付前检查代理示例](images/img-015.png)
+![支付前重新检查代理的提醒示例](images/img-015.png)
+
+![代理地区已经变化时不要继续支付](images/img-018.png)
 
 ## 九、进入 PayPal 并处理验证
 
@@ -174,9 +190,19 @@ https://chatgpt.com/api/auth/session
 4. 打开接码链接读取验证码。
 5. 回到 PayPal 页面填入验证码并继续。
 
-![PayPal 验证页面示例](images/img-018.png)
+![ChatGPT Plus 试用支付页选择 PayPal 示例](images/img-017.png)
 
-![填写地址和手机号示例](images/img-020.png)
+![PayPal 登录或注册入口示例](images/img-019.png)
+
+![创建 PayPal 账户入口示例](images/img-020.png)
+
+![PayPal 安全验证示例](images/img-021.png)
+
+![填写虚拟卡和账单地址示例](images/img-022.png)
+
+![填写 PayPal 接码手机号示例](images/img-023.png)
+
+![输入 PayPal 短信验证码示例](images/img-024.png)
 
 ## 十、确认成功和后续处理
 
@@ -189,7 +215,7 @@ https://chatgpt.com/api/auth/session
 
 如果你需要长期稳定使用模型，不建议一直依赖这种临时链路。更省心的方式是使用 Lucoo 中转站 [https://cc.lucoo.net](https://cc.lucoo.net)，在店铺购买额度 [https://pay.ldxp.cn/shop/Lucoo](https://pay.ldxp.cn/shop/Lucoo)，再把 API Key 接到 Cherry Studio、Codex 或 CodeBuddy。
 
-![成功邮件示例](images/img-024.png)
+![OpenAI 订阅成功邮件示例](images/img-025.png)
 
 ## 常见问题
 
