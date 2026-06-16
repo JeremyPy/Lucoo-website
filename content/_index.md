@@ -12,8 +12,8 @@ description: "数据驱动的 VPS 与主机测评、对比与推荐"
     </a>
   </div>
   <div class="home-action-links">
-    <a href="https://cc.lucoo.net" target="_blank" rel="noopener noreferrer" class="home-action-button home-action-relay">
-      中转站地址：https://cc.lucoo.net
+    <a href="https://api.lucoo.net" target="_blank" rel="noopener noreferrer" class="home-action-button home-action-relay">
+      中转站地址：https://api.lucoo.net
     </a>
     <a href="https://pay.ldxp.cn/shop/Lucoo" target="_blank" rel="noopener noreferrer" class="home-action-button home-action-shop">
       店铺地址：https://pay.ldxp.cn/shop/Lucoo

@@ -17,17 +17,17 @@ featureimage: "cover.png"
 
 | 用途 | 地址 |
 | --- | --- |
-| 中转站地址 | [https://cc.lucoo.net](https://cc.lucoo.net) |
+| 中转站地址 | [https://api.lucoo.net](https://api.lucoo.net) |
 | 海外代理访问地址 | [https://apicc.lucoo.net](https://apicc.lucoo.net) |
 | Cherry Studio 下载地址 | [https://www.cherry-ai.com/](https://www.cherry-ai.com/) |
 | 额度购买地址 | [https://pay.ldxp.cn/shop/Lucoo](https://pay.ldxp.cn/shop/Lucoo) |
-| 充值地址 | [https://cc.lucoo.net/console/topup](https://cc.lucoo.net/console/topup) |
+| 充值地址 | [https://api.lucoo.net/console/topup](https://api.lucoo.net/console/topup) |
 
 ## 二、对接步骤
 
 ### 1. 注册并登录中转站
 
-打开 [https://cc.lucoo.net](https://cc.lucoo.net)，按页面提示完成注册并登录。
+打开 [https://api.lucoo.net](https://api.lucoo.net)，按页面提示完成注册并登录。
 
 ![中转站注册登录页面](image-1.png)
 
@@ -65,7 +65,7 @@ featureimage: "cover.png"
 
 ### 7. 确认服务地址
 
-安装完成后打开 Cherry Studio。默认地址通常是 `https://cc.lucoo.net`；如果你需要使用海外代理访问，可以改为 `https://apicc.lucoo.net`。
+安装完成后打开 Cherry Studio。默认地址通常是 `https://api.lucoo.net`；如果你需要使用海外代理访问，可以改为 `https://apicc.lucoo.net`。
 
 ![确认 Cherry Studio 服务地址](image-7.png)
 
@@ -106,7 +106,7 @@ featureimage: "cover.png"
 新账号默认会赠送一定额度，可以先直接测试。如果额度不足，按下面的流程充值：
 
 1. 打开购买地址：[https://pay.ldxp.cn/shop/Lucoo](https://pay.ldxp.cn/shop/Lucoo)
-2. 购买完成后，进入充值地址：[https://cc.lucoo.net/console/topup](https://cc.lucoo.net/console/topup)
+2. 购买完成后，进入充值地址：[https://api.lucoo.net/console/topup](https://api.lucoo.net/console/topup)
 3. 按页面提示完成充值后即可继续使用。
 
 ## 四、注意事项
@@ -114,4 +114,4 @@ featureimage: "cover.png"
 - <span class="lucoo-token-warning">token 分组必须配置</span>。这是最常见的不可用原因。
 - 令牌相当于访问凭证，不要公开分享给别人。
 - 如果模型列表获取失败，先检查中转站地址、令牌和网络环境是否正确。
-- 国内默认使用 `https://cc.lucoo.net`；跨境网络不稳定时可以尝试 `https://apicc.lucoo.net`。
+- 国内默认使用 `https://api.lucoo.net`；跨境网络不稳定时可以尝试 `https://apicc.lucoo.net`。

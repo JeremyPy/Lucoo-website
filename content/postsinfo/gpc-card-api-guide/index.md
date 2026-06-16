@@ -13,7 +13,7 @@ featureimage: "cover.png"
 
 > 本文是 Lucoo 根据 FlowPilot 使用文档重新整理的实操版。需要现成账号、Plus 相关卡密、API 额度或不想自己排查环境，可以先看店铺：[https://pay.ldxp.cn/shop/Lucoo](https://pay.ldxp.cn/shop/Lucoo)。
 >
-> 常用入口：中转站 [https://cc.lucoo.net](https://cc.lucoo.net)，转长链工具 [https://gpt.mooizz.com/](https://gpt.mooizz.com/)，配套工具 [https://faka.gsyun.cloud/](https://faka.gsyun.cloud/)，Plus 跳手机 / JSON 工具 [https://gtxx3600.github.io/GPTSession2CPAandSub2API/](https://gtxx3600.github.io/GPTSession2CPAandSub2API/)。
+> 常用入口：中转站 [https://api.lucoo.net](https://api.lucoo.net)，转长链工具 [https://gpt.mooizz.com/](https://gpt.mooizz.com/)，配套工具 [https://faka.gsyun.cloud/](https://faka.gsyun.cloud/)，Plus 跳手机 / JSON 工具 [https://gtxx3600.github.io/GPTSession2CPAandSub2API/](https://gtxx3600.github.io/GPTSession2CPAandSub2API/)。
 
 ## 先看结论
 
@@ -147,7 +147,7 @@ featureimage: "cover.png"
 
 记住一句话：充值卡密给账号开 Plus，API 卡密给系统换 API Key。两者混着用会浪费大量排查时间。自动化扩展、中转站、反代系统要的是 API Key，不是前台直冲用的充值卡密。
 
-如果还没有 API 次数套餐，可以从店铺入口购买：[https://pay.ldxp.cn/shop/Lucoo](https://pay.ldxp.cn/shop/Lucoo)。如果你只是想把模型能力接到客户端，优先考虑 Lucoo 中转站 [https://cc.lucoo.net](https://cc.lucoo.net)，创建令牌并配置 token 分组后再接入 Cherry Studio、Codex 或 CodeBuddy。
+如果还没有 API 次数套餐，可以从店铺入口购买：[https://pay.ldxp.cn/shop/Lucoo](https://pay.ldxp.cn/shop/Lucoo)。如果你只是想把模型能力接到客户端，优先考虑 Lucoo 中转站 [https://api.lucoo.net](https://api.lucoo.net)，创建令牌并配置 token 分组后再接入 Cherry Studio、Codex 或 CodeBuddy。
 
 ## 使用建议
 

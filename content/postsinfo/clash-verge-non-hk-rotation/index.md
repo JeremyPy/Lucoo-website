@@ -13,7 +13,7 @@ featureimage: "cover.png"
 
 > 本文是 Lucoo 根据 FlowPilot 使用文档重新整理的实操版。需要现成账号、Plus 相关卡密、API 额度或不想自己排查环境，可以先看店铺：[https://pay.ldxp.cn/shop/Lucoo](https://pay.ldxp.cn/shop/Lucoo)。
 >
-> 常用入口：中转站 [https://cc.lucoo.net](https://cc.lucoo.net)，转长链工具 [https://gpt.mooizz.com/](https://gpt.mooizz.com/)，配套工具 [https://faka.gsyun.cloud/](https://faka.gsyun.cloud/)，Plus 跳手机 / JSON 工具 [https://gtxx3600.github.io/GPTSession2CPAandSub2API/](https://gtxx3600.github.io/GPTSession2CPAandSub2API/)。
+> 常用入口：中转站 [https://api.lucoo.net](https://api.lucoo.net)，转长链工具 [https://gpt.mooizz.com/](https://gpt.mooizz.com/)，配套工具 [https://faka.gsyun.cloud/](https://faka.gsyun.cloud/)，Plus 跳手机 / JSON 工具 [https://gtxx3600.github.io/GPTSession2CPAandSub2API/](https://gtxx3600.github.io/GPTSession2CPAandSub2API/)。
 
 ## 先看结论
 
@@ -183,4 +183,4 @@ function main(config, profileName) {
 
 做 ChatGPT、PayPal 或自动化注册时，节点不是越多越好，而是要稳定、地区匹配、不要频繁跳。本文的非港轮询适合普通访问和减少手动切换，但遇到支付、绑卡、风控验证这类步骤时，建议临时固定到一个干净节点，完成关键步骤后再恢复轮询。
 
-如果你后续是为了接入 Lucoo 中转站，客户端一般不需要复杂代理，只要能访问 [https://cc.lucoo.net](https://cc.lucoo.net) 或海外入口 [https://apicc.lucoo.net](https://apicc.lucoo.net) 即可。额度购买地址：[https://pay.ldxp.cn/shop/Lucoo](https://pay.ldxp.cn/shop/Lucoo)。
+如果你后续是为了接入 Lucoo 中转站，客户端一般不需要复杂代理，只要能访问 [https://api.lucoo.net](https://api.lucoo.net) 或海外入口 [https://apicc.lucoo.net](https://apicc.lucoo.net) 即可。额度购买地址：[https://pay.ldxp.cn/shop/Lucoo](https://pay.ldxp.cn/shop/Lucoo)。

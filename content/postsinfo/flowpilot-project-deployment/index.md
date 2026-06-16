@@ -13,7 +13,7 @@ featureimage: "cover.png"
 
 > 本文是 Lucoo 根据 FlowPilot 使用文档重新整理的实操版。需要现成账号、Plus 相关卡密、API 额度或不想自己排查环境，可以先看店铺：[https://pay.ldxp.cn/shop/Lucoo](https://pay.ldxp.cn/shop/Lucoo)。
 >
-> 常用入口：中转站 [https://cc.lucoo.net](https://cc.lucoo.net)，转长链工具 [https://gpt.mooizz.com/](https://gpt.mooizz.com/)，配套工具 [https://faka.gsyun.cloud/](https://faka.gsyun.cloud/)，Plus 跳手机 / JSON 工具 [https://gtxx3600.github.io/GPTSession2CPAandSub2API/](https://gtxx3600.github.io/GPTSession2CPAandSub2API/)。
+> 常用入口：中转站 [https://api.lucoo.net](https://api.lucoo.net)，转长链工具 [https://gpt.mooizz.com/](https://gpt.mooizz.com/)，配套工具 [https://faka.gsyun.cloud/](https://faka.gsyun.cloud/)，Plus 跳手机 / JSON 工具 [https://gtxx3600.github.io/GPTSession2CPAandSub2API/](https://gtxx3600.github.io/GPTSession2CPAandSub2API/)。
 
 ## 先看结论
 
@@ -80,7 +80,7 @@ featureimage: "cover.png"
 
 `cpa` 和 `sub2api` 不是同一个东西，建议先想清楚你的目标：如果你要把 ChatGPT 登录态转成可调用的接口，重点看 `cpa`；如果你要把订阅或账号池整理成统一 API，才继续看 `sub2api`。前期不要同时开太多变量，否则部署失败时很难判断是网络、认证还是项目配置问题。
 
-如果只是想稳定使用模型，不一定非要自建。可以直接使用 Lucoo 中转站 [https://cc.lucoo.net](https://cc.lucoo.net)，额度从店铺购买：[https://pay.ldxp.cn/shop/Lucoo](https://pay.ldxp.cn/shop/Lucoo)，充值后生成 API Key 接入 Cherry Studio、Codex、CodeBuddy 等客户端即可。
+如果只是想稳定使用模型，不一定非要自建。可以直接使用 Lucoo 中转站 [https://api.lucoo.net](https://api.lucoo.net)，额度从店铺购买：[https://pay.ldxp.cn/shop/Lucoo](https://pay.ldxp.cn/shop/Lucoo)，充值后生成 API Key 接入 Cherry Studio、Codex、CodeBuddy 等客户端即可。
 
 ## 排查顺序
 

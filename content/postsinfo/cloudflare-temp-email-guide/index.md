@@ -13,7 +13,7 @@ featureimage: "cover.png"
 
 > 本文是 Lucoo 根据 FlowPilot 使用文档重新整理的实操版。需要现成账号、Plus 相关卡密、API 额度或不想自己排查环境，可以先看店铺：[https://pay.ldxp.cn/shop/Lucoo](https://pay.ldxp.cn/shop/Lucoo)。
 >
-> 常用入口：中转站 [https://cc.lucoo.net](https://cc.lucoo.net)，转长链工具 [https://gpt.mooizz.com/](https://gpt.mooizz.com/)，配套工具 [https://faka.gsyun.cloud/](https://faka.gsyun.cloud/)，Plus 跳手机 / JSON 工具 [https://gtxx3600.github.io/GPTSession2CPAandSub2API/](https://gtxx3600.github.io/GPTSession2CPAandSub2API/)。
+> 常用入口：中转站 [https://api.lucoo.net](https://api.lucoo.net)，转长链工具 [https://gpt.mooizz.com/](https://gpt.mooizz.com/)，配套工具 [https://faka.gsyun.cloud/](https://faka.gsyun.cloud/)，Plus 跳手机 / JSON 工具 [https://gtxx3600.github.io/GPTSession2CPAandSub2API/](https://gtxx3600.github.io/GPTSession2CPAandSub2API/)。
 
 ## 先看结论
 
@@ -113,7 +113,7 @@ featureimage: "cover.png"
 
 临时邮箱的核心不是“能生成一个地址”，而是“OpenAI 发来的验证邮件能稳定送到你能读取的地方”。所以配置时要同时检查生成端、转发端和收件端。少配任何一层，前台看起来都可能正常，但验证码就是收不到。
 
-如果你只是为了买现成 ChatGPT 账号或 Plus 相关服务，可以走店铺：[https://pay.ldxp.cn/shop/Lucoo](https://pay.ldxp.cn/shop/Lucoo)。如果你想把自己的账号池接到中转站，建议注册 [https://cc.lucoo.net](https://cc.lucoo.net) 后用 API Key 管理调用，不用每次都重新折腾邮箱链路。
+如果你只是为了买现成 ChatGPT 账号或 Plus 相关服务，可以走店铺：[https://pay.ldxp.cn/shop/Lucoo](https://pay.ldxp.cn/shop/Lucoo)。如果你想把自己的账号池接到中转站，建议注册 [https://api.lucoo.net](https://api.lucoo.net) 后用 API Key 管理调用，不用每次都重新折腾邮箱链路。
 
 ## 检查清单
 

@@ -22,16 +22,16 @@ featureimage: "image-34.png"
 | 用途 | 地址 |
 | --- | --- |
 | CodeBuddy IDE 下载 | [https://www.codebuddy.cn/cli/](https://www.codebuddy.cn/cli/) |
-| LucooNet 中转站 | [https://cc.lucoo.net](https://cc.lucoo.net) |
+| LucooNet 中转站 | [https://api.lucoo.net](https://api.lucoo.net) |
 | 海外代理访问地址 | [https://apicc.lucoo.net](https://apicc.lucoo.net) |
 | 额度购买地址 | [https://pay.ldxp.cn/shop/Lucoo](https://pay.ldxp.cn/shop/Lucoo) |
-| 充值地址 | [https://cc.lucoo.net/console/topup](https://cc.lucoo.net/console/topup) |
+| 充值地址 | [https://api.lucoo.net/console/topup](https://api.lucoo.net/console/topup) |
 
 ## 三、创建 LucooNet API Key
 
 ### 1. 登录 LucooNet
 
-打开 [https://cc.lucoo.net](https://cc.lucoo.net)，按页面提示完成注册并登录。
+打开 [https://api.lucoo.net](https://api.lucoo.net)，按页面提示完成注册并登录。
 
 ![登录 LucooNet 中转站](image-1.png)
 
@@ -144,7 +144,7 @@ featureimage: "image-34.png"
 | 配置项 | 填写内容 |
 | --- | --- |
 | 提供商 | `自定义 / Custom` |
-| 接口地址 | 国内默认填 `https://cc.lucoo.net/v1` |
+| 接口地址 | 国内默认填 `https://api.lucoo.net/v1` |
 | 海外代理地址 | 如果国内地址不可用，可改填 `https://apicc.lucoo.net/v1` |
 | API Key | 粘贴 LucooNet 里复制的 `sk-` 开头令牌，且该令牌必须已配置 token 分组 |
 | 模型名称 | 按你可用的模型填写，示例：`gpt-5.5` |

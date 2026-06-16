@@ -339,7 +339,7 @@ enableEmoji = true
   [[menu.main]]
     identifier = "relay"
     name = "中转站地址"
-    url = "https://cc.lucoo.net"
+    url = "https://api.lucoo.net"
     weight = 30
 
   [[menu.main]]

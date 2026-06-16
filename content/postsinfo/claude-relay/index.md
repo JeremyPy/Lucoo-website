@@ -23,10 +23,10 @@ featureimage: "cover.png"
 
 | 用途 | 地址 |
 | --- | --- |
-| Lucoo 中转站 | [https://cc.lucoo.net](https://cc.lucoo.net) |
+| Lucoo 中转站 | [https://api.lucoo.net](https://api.lucoo.net) |
 | 海外代理访问地址 | [https://apicc.lucoo.net](https://apicc.lucoo.net) |
 | 额度购买地址 | [https://pay.ldxp.cn/shop/Lucoo](https://pay.ldxp.cn/shop/Lucoo) |
-| 充值地址 | [https://cc.lucoo.net/console/topup](https://cc.lucoo.net/console/topup) |
+| 充值地址 | [https://api.lucoo.net/console/topup](https://api.lucoo.net/console/topup) |
 | CC Switch 下载地址 | [https://github.com/farion1231/cc-switch/releases](https://github.com/farion1231/cc-switch/releases) |
 | Claude Code 桌面端下载 | [https://code.claude.com/docs/zh-CN/desktop](https://code.claude.com/docs/zh-CN/desktop) |
 
@@ -36,7 +36,7 @@ featureimage: "cover.png"
 
 ### 1. 注册并登录中转站
 
-打开 [https://cc.lucoo.net](https://cc.lucoo.net)，按页面提示完成注册并登录。
+打开 [https://api.lucoo.net](https://api.lucoo.net)，按页面提示完成注册并登录。
 
 ![登录 Lucoo 中转站](relay-login.png)
 
@@ -95,9 +95,9 @@ featureimage: "cover.png"
 | 配置项 | 推荐填写 |
 | --- | --- |
 | 供应商名称 | `Lucoo` |
-| 官网链接 | `https://cc.lucoo.net` |
+| 官网链接 | `https://api.lucoo.net` |
 | API Key | 粘贴 Lucoo 中转站复制的 `sk-` 开头令牌 |
-| 请求地址 | 国内默认填 <span class="lucoo-red-url">https://cc.lucoo.net</span> |
+| 请求地址 | 国内默认填 <span class="lucoo-red-url">https://api.lucoo.net</span> |
 | 海外代理地址 | 如果默认地址不稳定，可改填 <span class="lucoo-red-url">https://apicc.lucoo.net</span> |
 
 <p class="lucoo-token-warning-block">Claude Code 桌面端这里填写的是兼容 Claude API 的服务端地址，通常不要在末尾加 `/v1`。`/v1` 是 Codex、Cherry Studio、CodeBuddy 这类 OpenAI 兼容配置里常用的地址写法。</p>
@@ -149,7 +149,7 @@ featureimage: "cover.png"
 Claude Code 桌面端通过 CC Switch 配置时，国内默认填：
 
 ```text
-https://cc.lucoo.net
+https://api.lucoo.net
 ```
 
 如果网络不稳定，可以尝试海外代理地址：
@@ -158,7 +158,7 @@ https://cc.lucoo.net
 https://apicc.lucoo.net
 ```
 
-这里一般不要写成 `https://cc.lucoo.net/v1`。只有配置 OpenAI 兼容客户端时，才通常使用 `/v1` 地址。
+这里一般不要写成 `https://api.lucoo.net/v1`。只有配置 OpenAI 兼容客户端时，才通常使用 `/v1` 地址。
 
 ### 3. 提示 API Key 无效
 
@@ -178,4 +178,4 @@ https://apicc.lucoo.net
 - API Key 相当于你的账户凭证，不要公开发布。
 - 不要把带有真实 Key 的截图上传到网站、群聊或仓库。
 - 如果怀疑 Key 泄露，立即到 Lucoo 后台删除旧令牌并重新创建。
-- 购买额度后，到 [https://cc.lucoo.net/console/topup](https://cc.lucoo.net/console/topup) 完成充值。
+- 购买额度后，到 [https://api.lucoo.net/console/topup](https://api.lucoo.net/console/topup) 完成充值。

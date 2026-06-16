@@ -13,7 +13,7 @@ featureimage: "images/img-001.png"
 
 > 这是一篇给新手看的 0 刀虚拟卡开通 ChatGPT Plus 实操教程。流程里会涉及账号、代理、虚拟卡、PayPal、接码和支付链接，变量比较多；如果你不想自己一点点排查，可以直接看 Lucoo 店铺：[https://pay.ldxp.cn/shop/Lucoo](https://pay.ldxp.cn/shop/Lucoo)。
 >
-> 本文会用到的常用工具：转长链 [https://gpt.mooizz.com/](https://gpt.mooizz.com/)，配套工具 [https://faka.gsyun.cloud/](https://faka.gsyun.cloud/)，Plus 跳手机 / 直取 JSON [https://gtxx3600.github.io/GPTSession2CPAandSub2API/](https://gtxx3600.github.io/GPTSession2CPAandSub2API/)。后续如果只是想用模型 API，可以走 Lucoo 中转站：[https://cc.lucoo.net](https://cc.lucoo.net)。
+> 本文会用到的常用工具：转长链 [https://gpt.mooizz.com/](https://gpt.mooizz.com/)，配套工具 [https://faka.gsyun.cloud/](https://faka.gsyun.cloud/)，Plus 跳手机 / 直取 JSON [https://gtxx3600.github.io/GPTSession2CPAandSub2API/](https://gtxx3600.github.io/GPTSession2CPAandSub2API/)。后续如果只是想用模型 API，可以走 Lucoo 中转站：[https://api.lucoo.net](https://api.lucoo.net)。
 
 ## 先说结论
 
@@ -219,7 +219,7 @@ https://chatgpt.com/api/auth/session
 1. 打开 ChatGPT 订阅或账单页面，确认试用结束时间和续费状态。
 2. 如果只是试用，不准备续费，尽快取消连续订阅，避免后面自动扣款。
 
-如果你需要长期稳定使用模型，不建议一直依赖这种临时链路。更省心的方式是使用 Lucoo 中转站 [https://cc.lucoo.net](https://cc.lucoo.net)，在店铺购买额度 [https://pay.ldxp.cn/shop/Lucoo](https://pay.ldxp.cn/shop/Lucoo)，再把 API Key 接到 Cherry Studio、Codex 或 CodeBuddy。
+如果你需要长期稳定使用模型，不建议一直依赖这种临时链路。更省心的方式是使用 Lucoo 中转站 [https://api.lucoo.net](https://api.lucoo.net)，在店铺购买额度 [https://pay.ldxp.cn/shop/Lucoo](https://pay.ldxp.cn/shop/Lucoo)，再把 API Key 接到 Cherry Studio、Codex 或 CodeBuddy。
 
 ![OpenAI 订阅成功邮件示例](images/img-025.png)
 
@@ -247,4 +247,4 @@ https://chatgpt.com/api/auth/session
 
 ## 最后提醒
 
-这套流程本质上是在和支付风控打交道，变量很多。能自己排查的人，可以按本文一步一步做；不想把时间耗在代理、卡、接码和链接异常上的，可以直接走 Lucoo 店铺：[https://pay.ldxp.cn/shop/Lucoo](https://pay.ldxp.cn/shop/Lucoo)。如果只是需要日常使用 GPT、Codex、Cherry Studio、CodeBuddy，走中转站 API 往往更稳定：[https://cc.lucoo.net](https://cc.lucoo.net)。
+这套流程本质上是在和支付风控打交道，变量很多。能自己排查的人，可以按本文一步一步做；不想把时间耗在代理、卡、接码和链接异常上的，可以直接走 Lucoo 店铺：[https://pay.ldxp.cn/shop/Lucoo](https://pay.ldxp.cn/shop/Lucoo)。如果只是需要日常使用 GPT、Codex、Cherry Studio、CodeBuddy，走中转站 API 往往更稳定：[https://api.lucoo.net](https://api.lucoo.net)。

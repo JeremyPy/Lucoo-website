@@ -17,7 +17,7 @@
   font-weight: inherit;
 }
 
-.main-menu a[href="https://cc.lucoo.net"] {
+.main-menu a[href="https://api.lucoo.net"] {
   border-radius: 0.45rem;
   background: #16a34a;
   color: #ffffff;
@@ -26,12 +26,12 @@
   box-shadow: 0 8px 18px rgba(22, 163, 74, 0.28);
 }
 
-.main-menu a[href="https://cc.lucoo.net"]:hover {
+.main-menu a[href="https://api.lucoo.net"]:hover {
   background: #22c55e;
   color: #ffffff;
 }
 
-.main-menu a[href="https://cc.lucoo.net"] span {
+.main-menu a[href="https://api.lucoo.net"] span {
   color: inherit;
   font-weight: inherit;
 }
