@@ -24,6 +24,8 @@ featureimage: "cover.png"
 
 <p class="lucoo-token-warning-block">重点：兑换码不是 API Key。先兑换余额，再创建 API Key，最后再配置 Codex。</p>
 
+![Codex CLI 接入 Lucoo 配置示意图](codex-cli-lucoo-config.png)
+
 ## 二、登录后台并创建 API Key
 
 1. 打开 [https://cc.lucoo.net](https://cc.lucoo.net)，注册并登录。
@@ -59,6 +61,24 @@ npm install -g @openai/codex
 ```bash
 codex --version
 ```
+
+### Windows 用户环境截图参考
+
+Windows 用户如果还没有顺手的终端环境，可以先装 Windows Terminal，再装 Node.js。
+
+![Windows Terminal 下载页面](windows-terminal-release.png)
+
+![Windows Terminal 程序启动位置](windows-terminal-open.png)
+
+![Windows Terminal 多标签窗口](windows-terminal-tabs.png)
+
+Node.js 安装时，遇到 Native Modules 选项可以勾选，后续装命令行工具会省事一些。
+
+![Node.js 安装 Native Modules 选项](node-setup-native-modules.png)
+
+装好后在终端里输入 `node -v`，能看到版本号就说明 Node.js 环境可用。
+
+![Node.js 版本检查](node-version-check.png)
 
 ## 四、写入 Codex 配置
 

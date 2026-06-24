@@ -17,6 +17,8 @@ featureimage: "cover.png"
 
 Codex CLI 和 Codex IDE 插件共享配置层。也就是说，大多数情况下你只要把 `~/.codex/config.toml` 和 `~/.codex/auth.json` 配好，编辑器重启后就会读取同一套配置。
 
+![IDE 插件读取 Codex 本地配置流程](ide-config-flow.png)
+
 ## 二、准备 Lucoo API Key
 
 1. 打开 [https://cc.lucoo.net](https://cc.lucoo.net)。

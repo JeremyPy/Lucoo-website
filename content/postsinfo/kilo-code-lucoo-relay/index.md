@@ -27,6 +27,8 @@ Settings / Preferences -> Plugins -> Marketplace
 
 搜索 `Kilo Code` 并安装。安装完成后重启 IDE。
 
+![JetBrains Marketplace 搜索并安装 Kilo Code](kilo-marketplace.png)
+
 也可以从 JetBrains Marketplace 打开插件页：
 
 [https://plugins.jetbrains.com/plugin/28350-kilo-code](https://plugins.jetbrains.com/plugin/28350-kilo-code)
@@ -46,6 +48,8 @@ Settings / Preferences -> Plugins -> Marketplace
 进入 Kilo Code 设置页，找到模型供应商或 API Provider 设置。
 
 按下面填写：
+
+![Kilo Code 填写 Lucoo Provider 示意图](kilo-lucoo-provider.png)
 
 | 配置项 | 内容 |
 | --- | --- |

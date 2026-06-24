@@ -23,6 +23,8 @@ OpenClaw 是一个可以把 AI Agent 接到 Telegram、Discord、Slack 等渠道
 | 推荐分组 | `pro` |
 | 防丢主页 | `https://lucoo.net` |
 
+![OpenClaw 接入 Lucoo 的推荐顺序](openclaw-flow.png)
+
 <p class="lucoo-token-warning-block">OpenClaw 里填的是 API Key，不是兑换码。兑换码请先在 Lucoo 后台钱包兑换。</p>
 
 ## 二、安装 OpenClaw
@@ -65,6 +67,8 @@ openclaw onboard
 | 模型 | 后台当前可用模型，例如 `gpt-5.5` |
 
 如果界面要求环境变量，可以在启动前设置：
+
+![OpenClaw Lucoo 环境变量示意图](openclaw-lucoo-env.png)
 
 ```bash
 export OPENAI_API_KEY="sk-这里填你自己的 Lucoo API Key"

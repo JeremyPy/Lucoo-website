@@ -21,6 +21,8 @@ OpenCode 支持自定义模型供应商。Lucoo 按 OpenAI 兼容接口接入时
 | Base URL | `https://cc.lucoo.net/v1` |
 | API Key | Lucoo 后台「API 密钥」里创建的 `sk-` 开头 Key |
 
+![OpenCode Lucoo Provider 配置示意图](opencode-provider-config.png)
+
 主站不稳定时，备用 Base URL 可以换成：
 
 - `https://api.lucoo.net/v1`

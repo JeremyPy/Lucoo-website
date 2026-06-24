@@ -29,6 +29,8 @@ featureimage: "cover.png"
 
 下载后按系统提示安装即可。
 
+![Cherry Studio 下载安装到对应系统版本](cherry-download-release.png)
+
 ## 三、先在 Lucoo 后台创建 Key
 
 1. 打开 [https://cc.lucoo.net](https://cc.lucoo.net)。
@@ -43,6 +45,8 @@ featureimage: "cover.png"
 
 打开 Cherry Studio，进入设置里的模型服务商，新增一个 OpenAI 兼容服务商。
 
+![Cherry Studio 新增服务商时选择 OpenAI](cherry-provider-openai.png)
+
 推荐填写：
 
 | 配置项 | 内容 |
@@ -51,6 +55,8 @@ featureimage: "cover.png"
 | API Key | 你在后台创建的 `sk-` 开头 Key |
 | API 地址 | `https://cc.lucoo.net/v1` |
 | 模型 | 先获取模型列表，或手动填写后台支持的模型 |
+
+![Cherry Studio 填写 Lucoo 服务商示意图](cherry-lucoo-provider.png)
 
 如果主站访问不稳定，可以把 API 地址换成：
 
