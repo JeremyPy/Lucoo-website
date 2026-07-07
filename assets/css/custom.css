@@ -69,6 +69,22 @@
   color: #ffffff;
 }
 
+.lucoo-header-qq {
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  border: 0;
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.30);
+  cursor: pointer;
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+.lucoo-header-qq:hover,
+.lucoo-header-qq:focus-visible {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  color: #ffffff;
+  outline: none;
+}
+
 article.max-w-full.prose > div.relative .mt-3.mb-10.text-2xl {
   display: none;
 }
