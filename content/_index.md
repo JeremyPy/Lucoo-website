@@ -35,7 +35,7 @@ description: "数据驱动的 VPS 与主机测评、对比与推荐"
       <h2 id="lucoo-qq-modal-title">加入 QQ 交流群：1081378039</h2>
       <p>扫码加入群聊，或点击下方链接直接跳转加入。</p>
     </div>
-    <img class="lucoo-qq-modal__qrcode" src="/images/qq-lucoo-ai-group-qrcode.png" alt="Lucoo人工智能交流群 QQ 群二维码，群号 1081378039" loading="lazy" decoding="async">
+    <img class="lucoo-qq-modal__qrcode" src="/images/qq-lucoo-ai-group-qrcode.png" alt="Lucoo人工智能交流群 QQ 群二维码，群号 1081378039" decoding="async" fetchpriority="low">
     <a class="lucoo-qq-modal__join" href="https://qm.qq.com/q/WXscESbS0w" target="_blank" rel="noopener noreferrer">
       点击链接加入群聊【Lucoo人工智能交流群1️⃣】
     </a>
