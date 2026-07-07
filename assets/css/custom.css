@@ -301,7 +301,6 @@ article.max-w-full.prose > div.relative .mt-3.mb-10.text-2xl {
   display: block;
   height: auto;
   margin: 0 auto 1rem;
-  max-height: 58vh;
   max-width: 100%;
   object-fit: contain;
   width: min(420px, 100%);
@@ -346,7 +345,4 @@ article.max-w-full.prose > div.relative .mt-3.mb-10.text-2xl {
     padding-right: 1.8rem;
   }
 
-  .lucoo-qq-modal__qrcode {
-    max-height: 55vh;
-  }
 }
