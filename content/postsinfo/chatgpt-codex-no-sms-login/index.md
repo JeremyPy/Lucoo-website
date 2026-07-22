@@ -1,7 +1,7 @@
 ---
 title: "ChatGPT 无需手机号短信验证使用 Codex客户端"
 date: 2026-07-22T12:58:22+08:00
-lastmod: 2026-07-22T13:30:00+08:00
+lastmod: 2026-07-22T14:50:00+08:00
 description: "Codex Agent Identity · 无需手机号登录 Codex：无需验证码 / 免短信，用 ChatGPT Session 生成 auth.json，导入 Cockpit 启动 Codex，跳过 OAuth 手机验证与接码。"
 slug: "chatgpt-codex-no-sms-login"
 tags: ["ChatGPT", "Codex", "Cockpit", "auth.json", "Agent Identity", "无需验证码", "免短信", "无需手机号登录"]
@@ -86,7 +86,7 @@ featureimage: "image-01.png"
 
 如果还没有使用过 Cockpit，可以先参考：[Cockpit 本地反代与多账号管理教程](https://lucoo.net/postsinfo/cockpit-local-reverse-proxy/)。
 
-### 2. 导入 auth.json
+### 2. 导入 auth.json 到 API 服务
 
 打开 Cockpit，进入 Codex 模块，然后：
 
@@ -94,19 +94,24 @@ featureimage: "image-01.png"
 2. 在弹窗顶部选择“导入”；
 3. 点击“从本地文件导入”；
 4. 选择刚刚下载的 `auth.json`；
-5. 解析成功后，确认显示的是 Agent Identity 账号；
-6. 点击“不检测，直接导入”。
+5. 解析成功后，确认显示的是 **Agent Identity** 账号；
+6. 点击绿色按钮 **「直接导入并添加到 API 服务」**（不要只点「不检测，直接导入」，这样才能写入 API 服务号池）。
 
-### 3. 刷新账号状态
+![直接导入并添加到 API 服务](image-03-import-api.jpg)
 
-导入成功后，在账号卡片底部点击刷新按钮，等待 Cockpit 拉取账号额度和订阅状态。
+如果提示「已存在」，说明该账号此前已导入过；可先删除旧记录再导入，或直接使用已有账号继续下一步。
 
-如果暂时没有显示额度，可以稍等片刻后再刷新一次。
+### 3. 在 API 服务中点击「开始」
 
-### 4. 启动 Codex
+导入并加入 API 服务成功后，切换到 Cockpit 的 **API 服务** 卡片（例如「API 服务-新」）：
 
-账号状态刷新完成后，点击账号卡片上的“开始”或播放按钮。Cockpit 会使用刚导入的 Agent Identity 账号启动 Codex 客户端，无需再次在 Codex 中走浏览器 OAuth 或短信接码流程。
+1. 确认状态为运行中，账号池中有可用账号；
+2. 点击卡片底部工具栏中的 **播放 / 开始** 按钮；
+3. Cockpit 会使用该 Agent Identity 账号池启动服务 / 进入 Codex，无需再走浏览器 OAuth 或短信接码。
 
+![在 API 服务卡片点击开始](image-04-api-start.png)
+
+> 本机地址类似 `http://localhost:xxxxx/v1`，密钥形如 `agt_codex_...`，可按需复制给本地客户端使用。
 ## 四、常见问题
 
 ### Session 页面没有显示 JSON
