@@ -1,10 +1,11 @@
 ---
 title: "ChatGPT 无需手机号短信验证使用 Codex客户端"
 date: 2026-07-22T12:58:22+08:00
-lastmod: 2026-07-22T12:58:22+08:00
-description: "利用浏览器中已有的 ChatGPT 登录状态生成 auth.json，并导入 Cockpit 启动 Codex 客户端，避免在 Codex 中重复接收手机号短信验证码。"
+lastmod: 2026-07-22T13:30:00+08:00
+description: "Codex Agent Identity · 无需手机号登录 Codex：无需验证码 / 免短信，用 ChatGPT Session 生成 auth.json，导入 Cockpit 启动 Codex，跳过 OAuth 手机验证与接码。"
 slug: "chatgpt-codex-no-sms-login"
-tags: ["ChatGPT", "Codex", "Cockpit", "auth.json"]
+tags: ["ChatGPT", "Codex", "Cockpit", "auth.json", "Agent Identity", "无需验证码", "免短信", "无需手机号登录"]
+keywords: ["Codex Agent Identity", "无需手机号登录 Codex", "Codex 无需验证码", "Codex 免短信", "Codex 免接码", "Codex login without phone", "Codex no SMS verification", "agent_identity", "auth.json", "Cockpit"]
 categories: ["技术分享"]
 showTableOfContents: true
 showSummary: true
@@ -137,6 +138,17 @@ featureimage: "image-01.png"
 ## 六、相关入口
 
 - auth.json 生成工具：[https://codex.lucoo.net/](https://codex.lucoo.net/)
+- 开源仓库：[https://github.com/JeremyPy/codex-agent-identity](https://github.com/JeremyPy/codex-agent-identity)
 - ChatGPT：[https://chatgpt.com/](https://chatgpt.com/)
 - Cockpit 下载：[https://github.com/jlcodes99/cockpit-tools/releases](https://github.com/jlcodes99/cockpit-tools/releases)
 - Cockpit 完整教程：[https://lucoo.net/postsinfo/cockpit-local-reverse-proxy/](https://lucoo.net/postsinfo/cockpit-local-reverse-proxy/)
+
+## 七、关键词 / Keywords
+
+便于搜索发现（中英双语）：
+
+**中文：** Codex Agent Identity · 无需手机号登录 Codex · Codex 无需验证码 · Codex 免短信 · Codex 免接码 · Codex 跳过手机验证 · ChatGPT Session 转 auth.json · Cockpit 导入 Codex · Codex CLI 登录 · agent_identity
+
+**English:** Codex Agent Identity · Login to Codex without phone number · Codex no SMS verification · Codex without verification code · Skip phone verification for Codex · ChatGPT session to auth.json · Import auth.json into Cockpit · Codex CLI login · agent_identity · no-SMS Codex login
+
+在线工具：[https://codex.lucoo.net/](https://codex.lucoo.net/)
