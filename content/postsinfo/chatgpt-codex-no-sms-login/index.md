@@ -1,8 +1,8 @@
 ---
 title: "ChatGPT 无需手机号短信验证使用 Codex客户端"
 date: 2026-07-22T12:58:22+08:00
-lastmod: 2026-07-22T14:50:00+08:00
-description: "Codex Agent Identity · 无需手机号登录 Codex：无需验证码 / 免短信，用 ChatGPT Session 生成 auth.json，导入 Cockpit 启动 Codex，跳过 OAuth 手机验证与接码。"
+lastmod: 2026-07-24T10:00:00+08:00
+description: "【重要】截止 2026-07-23 该方法新账号无法使用（403）；已授权账号无影响。历史文档：ChatGPT Session 生成 auth.json 导入 Cockpit。"
 slug: "chatgpt-codex-no-sms-login"
 tags: ["ChatGPT", "Codex", "Cockpit", "auth.json", "Agent Identity", "无需验证码", "免短信", "无需手机号登录"]
 keywords: ["Codex Agent Identity", "无需手机号登录 Codex", "Codex 无需验证码", "Codex 免短信", "Codex 免接码", "Codex login without phone", "Codex no SMS verification", "agent_identity", "auth.json", "Cockpit"]
@@ -11,6 +11,11 @@ showTableOfContents: true
 showSummary: true
 featureimage: "image-01.png"
 ---
+
+> ⚠️ **重要提醒（截止 2026 年 7 月 23 日）**  
+> 该方法**新账号已无法使用**，生成 / 注册时可能出现 **403** 等错误。  
+> **已经完成授权的账号不受影响**（此前已成功生成并导入使用的可继续用）。  
+> 请勿再对新账号依赖本流程。在线工具页也会显示同一提醒： [https://codex.lucoo.net/](https://codex.lucoo.net/)
 
 如果你已经能在浏览器中正常使用 ChatGPT，但在 Codex 客户端登录时不方便再次接收手机号短信验证码，可以利用浏览器里已有的登录状态生成 `auth.json`，再通过 Cockpit 导入并启动 Codex。
 
