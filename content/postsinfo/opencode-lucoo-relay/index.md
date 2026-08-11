@@ -1,75 +1,154 @@
 ---
-title: "OpenCode 接入 Lucoo 中转站客户版教程"
+title: "OpenCode 桌面版接入 Lucoo 中转站完整教程"
 date: 2026-06-24T10:03:00+08:00
-lastmod: 2026-07-07T10:03:00+08:00
-description: "OpenCode 使用 Lucoo OpenAI 兼容接口的客户版教程：配置 provider、baseURL、auth、模型名和常见报错排查。"
+lastmod: 2026-08-11T16:30:00+08:00
+description: "从创建 Lucoo API Key、配置 OpenCode 桌面版自定义提供商，到选择模型、添加项目和排查常见错误的完整教程。"
 slug: "opencode-lucoo-relay"
-tags: ["OpenCode", "AI", "CLI", "中转站", "Lucoo"]
+tags: ["OpenCode", "AI", "桌面版", "中转站", "Lucoo"]
 categories: ["技术分享"]
 showTableOfContents: true
 showSummary: true
 featureimage: "cover.png"
 ---
 
-OpenCode 也可以接入 Lucoo。它和 Codex 的区别是：OpenCode 主要读自己的配置文件 `~/.config/opencode/opencode.json`，API Key 可以通过 `opencode auth login` 写入，也可以手动写入认证文件。
+OpenCode 桌面版支持添加自定义模型提供商。通过 OpenAI 兼容接口接入 Lucoo 后，不需要手动维护复杂的启动参数，就能在图形界面中选择模型、添加项目并新建会话。
 
 <div style="border:2px solid #ef4444;background:#fff1f2;color:#991b1b;padding:14px 16px;border-radius:12px;font-size:18px;font-weight:700;line-height:1.7;margin:18px 0;">
-重点：OpenCode 的 Base URL 填 <code>https://cc.lucoo.net/v1</code>。不要把 Lucoo 兑换码填进去，必须填 <code>sk-</code> 开头 API Key。</div>
+重点：Base URL 填 <code>https://cc.lucoo.net/v1</code>；凭证必须使用 Lucoo 后台创建的 <code>sk-</code> 开头 API Key，不能填写兑换码。</div>
 
-![OpenCode Lucoo Provider 配置示意图](opencode-provider-config.png)
+## 一、开始前准备
 
-## 一、准备信息
+### 常用地址
 
-| 配置项 | 填写内容 |
+| 用途 | 地址 |
 | --- | --- |
+| Lucoo 中转站 | [https://cc.lucoo.net](https://cc.lucoo.net) |
+| 海外代理入口 | [https://apicc.lucoo.net](https://apicc.lucoo.net) |
+| 额度购买 | [https://pay.ldxp.cn/shop/Lucoo](https://pay.ldxp.cn/shop/Lucoo) |
+| OpenCode 桌面版下载 | [https://opencode.ai/zh/download](https://opencode.ai/zh/download) |
+| OpenCode 提供商文档 | [https://opencode.ai/docs/zh-cn/providers/](https://opencode.ai/docs/zh-cn/providers/) |
+
+### 配置速查
+
+| 配置项 | 推荐填写 |
+| --- | --- |
+| 提供商名称 | `Lucoo` |
 | Provider ID | `lucoo` |
-| Provider 名称 | `Lucoo` |
 | Base URL | `https://cc.lucoo.net/v1` |
-| API Key | Lucoo 后台创建的 `sk-` 开头密钥 |
-| 推荐模型 | `gpt-5.5`，如果后台展示不同，以后台为准 |
+| API Key | Lucoo 后台创建的 `sk-...` 密钥 |
+| 令牌分组 | OpenAI 兼容分组，例如 `pro` 或 `plus` |
+| 模型 ID | 以 Lucoo 后台当前显示的可用模型为准 |
 
-备用 Base URL：
+<p class="lucoo-token-warning-block">OpenCode 这里走的是 OpenAI 兼容接口，不要选择 Claude 专用分组。模型名称也不要照搬本文截图，后台显示什么模型 ID，就填写什么模型 ID。</p>
 
-- `https://api.lucoo.net/v1`
-- `https://hkcc.lucoo.net/v1`
-- `https://sgcc.lucoo.net/v1`
-- `https://uscc.lucoo.net/v1`
+## 二、创建 Lucoo API Key
 
-## 二、安装 OpenCode
+已经有可用 `sk-` 密钥的用户，可以跳到下一节；没有 Key 的用户按下面步骤创建。
 
-先按 OpenCode 官方方式安装，安装后检查：
+### 1. 注册并登录 Lucoo
 
-```bash
-opencode --version
+打开 [https://cc.lucoo.net](https://cc.lucoo.net)，按页面提示注册并登录。如果已经购买兑换码，先进入钱包或兑换页面完成余额兑换。
+
+### 2. 进入令牌管理
+
+登录控制台后，打开「令牌管理」或「API 密钥」页面，然后点击「添加令牌」。不同版本的后台文字可能略有区别，但入口都在个人控制台中。
+
+### 3. 创建 OpenAI 兼容令牌
+
+建议按下面方式填写：
+
+| 配置项 | 建议 |
+| --- | --- |
+| 名称 | 方便自己识别，例如 `OpenCode Desktop` |
+| 分组 | 优先选择 `pro`；轻量使用可选择 `plus` |
+| 过期时间 | 按自己的安全要求设置，也可以暂时不过期 |
+| 额度 | 保持默认，或为单个客户端设置独立限额 |
+| 模型限制 | 新手先不限制，确认连通后再按需收窄 |
+
+创建完成后，复制完整的 `sk-` 开头 API Key。这个密钥只会用于后面的 OpenCode 配置，不要把它发到群聊、截图或代码仓库中。
+
+## 三、下载并打开 OpenCode 桌面版
+
+打开 [OpenCode 下载页面](https://opencode.ai/zh/download)，根据自己的系统下载 macOS、Windows 或 Linux 版本。
+
+![下载 OpenCode 桌面版](desktop-download.png)
+
+安装完成后启动 OpenCode。首次进入时可以暂时不添加项目，先完成模型提供商配置。
+
+![打开 OpenCode 桌面版](desktop-open.png)
+
+## 四、添加 Lucoo 自定义提供商
+
+### 1. 进入模型提供商设置
+
+点击 OpenCode 的设置按钮，进入「模型提供商」页面。
+
+![进入 OpenCode 模型提供商设置](desktop-provider-settings.png)
+
+### 2. 选择自定义提供商
+
+在提供商列表中选择「自定义提供商」，开始添加 Lucoo。
+
+![选择 OpenCode 自定义提供商](desktop-custom-provider.png)
+
+### 3. 填写连接信息
+
+按下面内容填写，不要把真实 API Key 放进公开截图：
+
+| 字段 | 填写内容 |
+| --- | --- |
+| 名称 | `Lucoo` |
+| Provider ID | `lucoo` |
+| Base URL | `https://cc.lucoo.net/v1` |
+| API Key | 刚才复制的完整 `sk-...` 密钥 |
+
+如果界面要求选择兼容类型，选择 OpenAI Compatible。官方文档也说明，自定义 OpenAI 兼容提供商应使用带 `/v1` 的 API 端点。
+
+### 4. 添加模型
+
+模型 ID 必须与 Lucoo 后台当前开放的模型完全一致，包括大小写、连字符和版本号。显示名称可以自定义，建议直接与模型 ID 保持一致，方便排查。
+
+![填写 OpenCode 模型名称](desktop-model.png)
+
+例如后台显示某个模型 ID 为 `gpt-5.6-sol`，模型 ID 和显示名称都可以填写 `gpt-5.6-sol`；如果后台已经更新，请以后台最新列表为准，不要照抄过期名称。
+
+填写完成后点击提交或保存，返回 OpenCode 首页。
+
+![OpenCode 自定义提供商保存成功](desktop-provider-saved.png)
+
+## 五、添加项目并测试模型
+
+### 1. 添加本地项目
+
+在首页点击「添加项目」，选择需要让 OpenCode 读取的本地项目目录。建议先用一个不包含敏感资料的测试目录验证连接。
+
+### 2. 新建会话并选择模型
+
+新建会话，在模型选择器中找到刚刚添加的 `Lucoo`，然后选择对应模型。
+
+![在 OpenCode 中新建会话并选择模型](desktop-new-session.png)
+
+### 3. 发送测试消息
+
+可以先发送一条简单请求：
+
+```text
+请用三句话介绍你能完成哪些代码任务，并列出当前项目的一级目录。
 ```
 
-如果命令不存在，先处理 OpenCode 本身安装问题，再配置 Lucoo。
+如果模型正常返回内容，并且能够在授权后读取项目目录，就说明 API Key、Base URL 和模型配置都已生效。
 
-## 三、兑换余额并创建 API Key
+![OpenCode 使用 Lucoo 模型测试成功](desktop-test-result.png)
 
-1. 打开 [https://cc.lucoo.net](https://cc.lucoo.net)。
-2. 登录后进入「钱包 / 兑换」，输入兑换码。
-3. 进入「API 密钥」，创建 `sk-` 开头 API Key。
-4. 分组建议优先选 `pro`；轻量使用可以选 `plus`。
-5. 复制 API Key，后面给 OpenCode 使用。
+## 六、配置文件方式（进阶备用）
 
-防丢地址：[https://lucoo.net](https://lucoo.net)。
-
-## 四、编辑 OpenCode provider 配置
-
-OpenCode 全局配置文件通常在：
+桌面版图形界面适合新手；如果需要多项目复用、版本管理或在终端中使用 OpenCode，可以维护全局配置文件：
 
 ```text
 ~/.config/opencode/opencode.json
 ```
 
-如果目录不存在：
-
-```bash
-mkdir -p ~/.config/opencode
-```
-
-写入或合并下面内容：
+下面是最小配置模板，其中 `your-model-id` 要替换成 Lucoo 后台实际模型 ID：
 
 ```json
 {
@@ -82,21 +161,8 @@ mkdir -p ~/.config/opencode
         "baseURL": "https://cc.lucoo.net/v1"
       },
       "models": {
-        "gpt-5.5": {
-          "name": "gpt-5.5",
-          "reasoning": true,
-          "modalities": {
-            "input": ["text", "image", "pdf"],
-            "output": ["text"]
-          }
-        },
-        "gpt-5.4": {
-          "name": "gpt-5.4",
-          "reasoning": true,
-          "modalities": {
-            "input": ["text", "image", "pdf"],
-            "output": ["text"]
-          }
+        "your-model-id": {
+          "name": "your-model-id"
         }
       }
     }
@@ -104,96 +170,62 @@ mkdir -p ~/.config/opencode
 }
 ```
 
-如果你的 OpenCode 版本使用 `@ai-sdk/openai` 也能正常工作，可以保持；新手建议先用上面的 OpenAI Compatible 写法。
-
-## 五、配置 API Key
-
-### 方式 A：用 OpenCode 登录命令
-
-执行：
+再执行：
 
 ```bash
 opencode auth login
 ```
 
-在 provider 里选择或输入 `lucoo`，然后粘贴 Lucoo 后台生成的 `sk-` 开头 API Key。
-
-OpenCode 通常会把认证信息保存到：
+选择或输入 Provider ID `lucoo`，粘贴 Lucoo 的 `sk-...` API Key。OpenCode 官方文档说明，凭证通常保存在：
 
 ```text
 ~/.local/share/opencode/auth.json
 ```
 
-### 方式 B：临时环境变量
+保存后，可以使用 `/models` 检查 Lucoo 模型是否出现在列表中。
 
-macOS / Linux / WSL：
+## 七、常见问题排查
 
-```bash
-export OPENAI_API_KEY="sk-这里填你自己的 Lucoo API Key"
-```
+### 1. 提示 401 或 API Key 无效
 
-Windows PowerShell：
+- 确认填写的是 `sk-` 开头的 API Key，而不是购买或兑换码。
+- 重新复制完整密钥，检查前后是否带有空格。
+- 确认令牌没有过期、没有耗尽额度，也没有被删除。
+- 如果怀疑密钥泄露，立即删除旧令牌并重新创建。
 
-```powershell
-$env:OPENAI_API_KEY="sk-这里填你自己的 Lucoo API Key"
-```
+### 2. 提示 404 或请求地址错误
 
-### 方式 C：手动认证文件
-
-如果你明确知道 OpenCode 当前版本的认证文件结构，可以手动维护认证文件。新手优先用方式 A，少出错。
-
-## 六、启动并测试
-
-启动：
-
-```bash
-opencode
-```
-
-选择 `lucoo / gpt-5.5`，然后输入：
-
-```text
-请用三句话说明你当前可以做什么，并读取一下当前目录。
-```
-
-能正常返回内容，说明 OpenCode 已经接入 Lucoo。
-
-## 七、常见问题
-
-### 1. provider 不存在
-
-检查 `~/.config/opencode/opencode.json` 是否是合法 JSON。最常见错误是：漏逗号、花括号不成对、中文引号混进去。
-
-### 2. API Key 错误或 401
-
-确认你填的是 `sk-` 开头 API Key，不是兑换码。改完后重启 OpenCode。
-
-### 3. 404 或请求地址错误
-
-确认 Base URL 是：
+Base URL 应填写：
 
 ```text
 https://cc.lucoo.net/v1
 ```
 
-不要漏 `/v1`。
+不要漏掉末尾的 `/v1`，也不要把控制台网页地址误当成 API 地址。
 
-### 4. 模型不可用
+### 3. 模型不存在或无权限
 
-把 `models` 里的模型名改成 Lucoo 后台当前可用模型名。比如后台显示 `gpt-5.4`，就选择 `gpt-5.4`。
+回到 Lucoo 后台确认当前分组可使用的模型 ID，并让 OpenCode 中的模型 ID 与它完全一致。如果设置了模型限制，可先取消限制完成测试，再逐步收窄权限。
 
-### 5. 想换入口
+### 4. 保存后看不到新提供商
 
-只改 `baseURL`，例如：
+先退出模型选择器并重新进入；仍未出现时，完全退出 OpenCode 再重新打开。使用配置文件方式的用户还要检查 JSON 是否有漏逗号、中文引号或括号不配对。
 
-```json
-"baseURL": "https://sgcc.lucoo.net/v1"
-```
+### 5. 能对话但工具调用异常
 
-## 八、参考入口
+部分模型只适合普通聊天，不一定具备稳定的工具调用能力。优先选择 Lucoo 后台标注为适合编码或 Agent 的模型，并确认自定义提供商使用的是正确兼容类型。
 
-- Lucoo 防丢主页：[https://lucoo.net](https://lucoo.net)
-- Lucoo 主站：[https://cc.lucoo.net](https://cc.lucoo.net)
-- OpenCode 配置文档：[https://opencode.ai/docs/config/](https://opencode.ai/docs/config/)
-- OpenCode providers 文档：[https://opencode.ai/docs/providers/](https://opencode.ai/docs/providers/)
-- OpenCode CLI 文档：[https://opencode.ai/docs/cli/](https://opencode.ai/docs/cli/)
+## 八、安全提醒
+
+- API Key 相当于账户凭证，不要上传到公开仓库或截图中。
+- 建议为 OpenCode 单独创建令牌，便于限额、审计和随时撤销。
+- 首次测试可以不限制模型，确认可用后再设置分组、额度和模型范围。
+- 不要在文章、工单或聊天中发送完整 Key；排查时只保留开头和结尾少量字符。
+
+## 九、参考资料
+
+- [OpenCode 官方下载](https://opencode.ai/zh/download)
+- [OpenCode 官方 Providers 文档](https://opencode.ai/docs/zh-cn/providers/)
+- [OpenCode 官方 CLI 文档](https://opencode.ai/docs/zh-cn/cli/)
+- [Lucoo 中转站](https://cc.lucoo.net)
+- [Lucoo 防丢主页](https://lucoo.net)
