@@ -1,7 +1,7 @@
 ---
 title: "GPT Image 三款模型画质档位实测"
 date: 2026-10-19T11:00:00+08:00
-lastmod: 2026-10-19T11:31:00+08:00
+lastmod: 2026-10-19T12:40:00+08:00
 description: "用 Lucoo 官方 Key 对比 openai/gpt-image-2.5-flare、openai/gpt-image-2.5-sunburst 和 openai/gpt-image-2，在 1536×1024 与 3840×2160 上测试 low 到 max。"
 slug: "gpt-image-quality-review"
 tags: ["生图", "GPT Image", "中转站", "OpenAI"]
@@ -29,6 +29,18 @@ Image 2 只有 low、medium、high。`xhigh` 和 `max` 会返回 400。它的档
 所以用 Image 2 时，日常写 medium，要最细的发饰和伞面再写 high。
 
 画面倾向上，Flare 更靠近人物，Sunburst 更常把桥、河和灯火画进画面，Image 2 更接近实拍，背景经常收成光斑。每格只出了一张，构图里有随机采样，不能当成模型的固定风格。
+
+## 档位对照
+
+下面每格是缩小图。点击后打开这张图的原图地址。Image 2 没有 `xhigh` 和 `max`。
+
+### 1536×1024
+
+{{< quality-grid size="1536" >}}
+
+### 3840×2160
+
+{{< quality-grid size="3840" >}}
 
 ## 测试条件
 
