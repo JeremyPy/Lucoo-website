@@ -1,7 +1,7 @@
 ---
 title: "GPT Image 三款模型画质档位实测"
 date: 2026-10-19T11:00:00+08:00
-lastmod: 2026-10-19T11:00:00+08:00
+lastmod: 2026-10-19T11:11:00+08:00
 description: "用 Lucoo 官方 Key 对比 openai/gpt-image-2.5-flare、openai/gpt-image-2.5-sunburst 和 openai/gpt-image-2，在 1536×1024 与 3840×2160 上测试 low 到 max。"
 slug: "gpt-image-quality-review"
 tags: ["生图", "GPT Image", "中转站", "OpenAI"]
@@ -72,49 +72,75 @@ Flare 和 Sunburst 都是左列。一款 2.5 模型跑满五档是 $0.303475。
 
 ## 1536×1024
 
-low 三款都能看。Flare 裁得更近，雨丝和肩上的水珠更显。Sunburst 把桥栏、河水和灯火放进来，人物稍远。Image 2 更像实拍，发饰和刺绣更简，背景虚化更干净。
+每张图下方是这次请求使用的 `model`。low 三款都能看。Flare 裁得更近，雨丝和肩上的水珠更显。Sunburst 把桥栏、河水和灯火放进来，人物稍远。Image 2 更像实拍，发饰和刺绣更简，背景虚化更干净。
 
 ### low
 
-![Flare 1536 low](flare-1536-low.jpg)
+#### openai/gpt-image-2.5-flare
 
-![Sunburst 1536 low](sunburst-1536-low.jpg)
+![openai/gpt-image-2.5-flare](flare-1536-low.jpg "model=openai/gpt-image-2.5-flare · size=1536x1024 · quality=low")
 
-![Image 2 1536 low](image2-1536-low.jpg)
+#### openai/gpt-image-2.5-sunburst
+
+![openai/gpt-image-2.5-sunburst](sunburst-1536-low.jpg "model=openai/gpt-image-2.5-sunburst · size=1536x1024 · quality=low")
+
+#### openai/gpt-image-2
+
+![openai/gpt-image-2](image2-1536-low.jpg "model=openai/gpt-image-2 · size=1536x1024 · quality=low")
 
 medium 开始拉开价格。2.5 仍是 $0.012，刺绣和雨更清楚。Image 2 的 medium 已经是 $0.043，和 2.5 的 high 同价，伞面、湿发和皮肤都更像照片。
 
 ### medium
 
-![Flare 1536 medium](flare-1536-medium.jpg)
+#### openai/gpt-image-2.5-flare
 
-![Sunburst 1536 medium](sunburst-1536-medium.jpg)
+![openai/gpt-image-2.5-flare](flare-1536-medium.jpg "model=openai/gpt-image-2.5-flare · size=1536x1024 · quality=medium")
 
-![Image 2 1536 medium](image2-1536-medium.jpg)
+#### openai/gpt-image-2.5-sunburst
+
+![openai/gpt-image-2.5-sunburst](sunburst-1536-medium.jpg "model=openai/gpt-image-2.5-sunburst · size=1536x1024 · quality=medium")
+
+#### openai/gpt-image-2
+
+![openai/gpt-image-2](image2-1536-medium.jpg "model=openai/gpt-image-2 · size=1536x1024 · quality=medium")
 
 high 是 2.5 的实用档，约 $0.043。Flare 继续特写，Sunburst 继续把亭台和倒影画完整。Image 2 的 high 是 $0.166，和 2.5 的 max 同价，人物更干净，背景常收成大光斑。
 
 ### high
 
-![Flare 1536 high](flare-1536-high.jpg)
+#### openai/gpt-image-2.5-flare
 
-![Sunburst 1536 high](sunburst-1536-high.jpg)
+![openai/gpt-image-2.5-flare](flare-1536-high.jpg "model=openai/gpt-image-2.5-flare · size=1536x1024 · quality=high")
 
-![Image 2 1536 high](image2-1536-high.jpg)
+#### openai/gpt-image-2.5-sunburst
+
+![openai/gpt-image-2.5-sunburst](sunburst-1536-high.jpg "model=openai/gpt-image-2.5-sunburst · size=1536x1024 · quality=high")
+
+#### openai/gpt-image-2
+
+![openai/gpt-image-2](image2-1536-high.jpg "model=openai/gpt-image-2 · size=1536x1024 · quality=high")
 
 xhigh 和 max 只有 2.5。细节加在发丝、流苏、雨点和伞面纸纹上。max 约 $0.166，大约是 high 的 4 倍。Image 2 请求这两档时，上游返回 `quality` 参数 `invalid_value`，原文是模型不支持 `xhigh` 或 `max`。
 
 ### xhigh
 
-![Flare 1536 xhigh](flare-1536-xhigh.jpg)
+#### openai/gpt-image-2.5-flare
 
-![Sunburst 1536 xhigh](sunburst-1536-xhigh.jpg)
+![openai/gpt-image-2.5-flare](flare-1536-xhigh.jpg "model=openai/gpt-image-2.5-flare · size=1536x1024 · quality=xhigh")
+
+#### openai/gpt-image-2.5-sunburst
+
+![openai/gpt-image-2.5-sunburst](sunburst-1536-xhigh.jpg "model=openai/gpt-image-2.5-sunburst · size=1536x1024 · quality=xhigh")
 
 ### max
 
-![Flare 1536 max](flare-1536-max.jpg)
+#### openai/gpt-image-2.5-flare
 
-![Sunburst 1536 max](sunburst-1536-max.jpg)
+![openai/gpt-image-2.5-flare](flare-1536-max.jpg "model=openai/gpt-image-2.5-flare · size=1536x1024 · quality=max")
+
+#### openai/gpt-image-2.5-sunburst
+
+![openai/gpt-image-2.5-sunburst](sunburst-1536-max.jpg "model=openai/gpt-image-2.5-sunburst · size=1536x1024 · quality=max")
 
 ## 3840×2160
 
@@ -124,39 +150,65 @@ Image 2 的 4K medium 有一次被安全审核拦住，类别是 sexual，重试
 
 ### low
 
-![Flare 3840 low](flare-3840-low.jpg)
+#### openai/gpt-image-2.5-flare
 
-![Sunburst 3840 low](sunburst-3840-low.jpg)
+![openai/gpt-image-2.5-flare](flare-3840-low.jpg "model=openai/gpt-image-2.5-flare · size=3840x2160 · quality=low")
 
-![Image 2 3840 low](image2-3840-low.jpg)
+#### openai/gpt-image-2.5-sunburst
+
+![openai/gpt-image-2.5-sunburst](sunburst-3840-low.jpg "model=openai/gpt-image-2.5-sunburst · size=3840x2160 · quality=low")
+
+#### openai/gpt-image-2
+
+![openai/gpt-image-2](image2-3840-low.jpg "model=openai/gpt-image-2 · size=3840x2160 · quality=low")
 
 ### medium
 
-![Flare 3840 medium](flare-3840-medium.jpg)
+#### openai/gpt-image-2.5-flare
 
-![Sunburst 3840 medium](sunburst-3840-medium.jpg)
+![openai/gpt-image-2.5-flare](flare-3840-medium.jpg "model=openai/gpt-image-2.5-flare · size=3840x2160 · quality=medium")
 
-![Image 2 3840 medium](image2-3840-medium.jpg)
+#### openai/gpt-image-2.5-sunburst
+
+![openai/gpt-image-2.5-sunburst](sunburst-3840-medium.jpg "model=openai/gpt-image-2.5-sunburst · size=3840x2160 · quality=medium")
+
+#### openai/gpt-image-2
+
+![openai/gpt-image-2](image2-3840-medium.jpg "model=openai/gpt-image-2 · size=3840x2160 · quality=medium")
 
 ### high
 
-![Flare 3840 high](flare-3840-high.jpg)
+#### openai/gpt-image-2.5-flare
 
-![Sunburst 3840 high](sunburst-3840-high.jpg)
+![openai/gpt-image-2.5-flare](flare-3840-high.jpg "model=openai/gpt-image-2.5-flare · size=3840x2160 · quality=high")
 
-![Image 2 3840 high](image2-3840-high.jpg)
+#### openai/gpt-image-2.5-sunburst
+
+![openai/gpt-image-2.5-sunburst](sunburst-3840-high.jpg "model=openai/gpt-image-2.5-sunburst · size=3840x2160 · quality=high")
+
+#### openai/gpt-image-2
+
+![openai/gpt-image-2](image2-3840-high.jpg "model=openai/gpt-image-2 · size=3840x2160 · quality=high")
 
 ### xhigh
 
-![Flare 3840 xhigh](flare-3840-xhigh.jpg)
+#### openai/gpt-image-2.5-flare
 
-![Sunburst 3840 xhigh](sunburst-3840-xhigh.jpg)
+![openai/gpt-image-2.5-flare](flare-3840-xhigh.jpg "model=openai/gpt-image-2.5-flare · size=3840x2160 · quality=xhigh")
+
+#### openai/gpt-image-2.5-sunburst
+
+![openai/gpt-image-2.5-sunburst](sunburst-3840-xhigh.jpg "model=openai/gpt-image-2.5-sunburst · size=3840x2160 · quality=xhigh")
 
 ### max
 
-![Flare 3840 max](flare-3840-max.jpg)
+#### openai/gpt-image-2.5-flare
 
-![Sunburst 3840 max](sunburst-3840-max.jpg)
+![openai/gpt-image-2.5-flare](flare-3840-max.jpg "model=openai/gpt-image-2.5-flare · size=3840x2160 · quality=max")
+
+#### openai/gpt-image-2.5-sunburst
+
+![openai/gpt-image-2.5-sunburst](sunburst-3840-max.jpg "model=openai/gpt-image-2.5-sunburst · size=3840x2160 · quality=max")
 
 ## 怎么选
 
